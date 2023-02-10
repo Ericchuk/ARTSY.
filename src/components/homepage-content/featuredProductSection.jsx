@@ -9,7 +9,7 @@ import ellipse16 from '../img/Ellipse 16.png';
 import ellipse17 from '../img/Ellipse 17.png';
 import ellipse18 from '../img/Ellipse 18.png';
 import './cssfile/featuredSection.css';
-<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500&display=swap" rel="stylesheet" />
+
 
 export default function FeaturedProduct() {
 

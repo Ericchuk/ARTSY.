@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Baskervville&family=Bellefair&family=Gemunu+Libre:wght@400;700&family=League+Spartan:wght@500;700&family=Lobster&family=Overpass:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Poppins:wght@400;700;800&family=Quicksand:wght@400;500;700&family=STIX+Two+Text:wght@400;500&display=swap");
 footer {
   position: relative;
+  font-family: "Clash Display", sans-serif;
 }
 footer .footer-aside-1 {
   padding: 10px 10px 70px;
