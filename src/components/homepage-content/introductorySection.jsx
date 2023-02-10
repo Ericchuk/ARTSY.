@@ -6,7 +6,7 @@ import './cssfile/introductorySection.css';
 
 export default function Banner1() {
     return(
-        <section>
+        <section className="section">
             <h3>Photography is poetry and beautiful untold stories</h3>
             <p>Flip through more than 10,000 vintage shots,old photographs, historic images and captures seamlessly in one place. Register to get top access.</p>
             <aside>

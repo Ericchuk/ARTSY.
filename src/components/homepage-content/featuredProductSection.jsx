@@ -3,34 +3,41 @@ import areWeThereYet from '../img/Rectangle 230.png';
 import oloibori from '../img/Rectangle 230 (1).png';
 import arrow from '../img/Vector (4).png';
 import ellipse from '../img/Ellipse 36.png';
+import ellipse14 from '../img/Ellipse 14.png';
+import ellipse15 from '../img/Ellipse 15.png';
+import ellipse16 from '../img/Ellipse 16.png';
+import ellipse17 from '../img/Ellipse 17.png';
+import ellipse18 from '../img/Ellipse 18.png';
+import './cssfile/featuredSection.css';
 
 export default function FeaturedProduct() {
 
     const creatorsImg = [
-        {id:0},
-        {id:1},
-        {id:2},
-        {id:3},
-        {id:4}
-    ]
+        {id:0, img:ellipse14},
+        {id:1, img:ellipse15},
+        {id:2, img:ellipse16},
+        {id:3, img:ellipse17},
+        {id:4, img:ellipse18},
+    ];
 
     const creators = creatorsImg.map((creator) => {
         return(
-            <p>{creator}</p>
+            <img src={creator.img} alt={creator.id} key={creator.id}/>
         )
     })
+
+
   return (
-    <section>
+    <section className="featured-section">
       <h3>Featured Product</h3>
       <article>
         {/* section1  */}
         <aside>
           <div>
-            {/* {creators} */}
             <div>
               <img src={booleanEgyptian} alt="lady" />
               <h4>Boolean Egyptian</h4>
-              <div>
+              <div className="arrow-container">
                 <img src={arrow} alt="" />
                 <img src={ellipse} alt="" />
               </div>
@@ -42,11 +49,7 @@ export default function FeaturedProduct() {
             </p>
             <aside>
               <div>
-                {/* <img src={} alt=""/>
-                <img src={} alt=""/>
-                <img src={} alt=""/>
-                <img src={} alt=""/>
-                <img src={} alt=""/> */}
+                {creators}
               </div>
               <b>64 major creators</b>
             </aside>
@@ -59,8 +62,8 @@ export default function FeaturedProduct() {
           <div>
             <div>
               <img src={areWeThereYet} alt="" />
-              <h4>Boolean Egyptian</h4>
-              <div>
+              <h4>Are We There Yet</h4>
+              <div className="arrow-container">
                 <img src={arrow} alt="" />
                 <img src={ellipse} alt="" />
               </div>
@@ -72,11 +75,7 @@ export default function FeaturedProduct() {
             </p>
             <aside>
               <div>
-                {/* <img src={} alt=""/>
-              <img src={} alt=""/>
-              <img src={} alt=""/>
-              <img src={} alt=""/>
-              <img src={} alt=""/> */}
+                {creators}
               </div>
               <b>64 major creators</b>
             </aside>
@@ -89,8 +88,8 @@ export default function FeaturedProduct() {
           <div>
             <div>
               <img src={oloibori} alt="" />
-              <h4>Boolean Egyptian</h4>
-              <div>
+              <h4>Oloibiri 1997</h4>
+              <div className="arrow-container">
                 <img src={arrow} alt="" />
                 <img src={ellipse} alt="" />
               </div>
@@ -102,11 +101,7 @@ export default function FeaturedProduct() {
             </p>
             <aside>
               <div>
-                {/* <img src={} alt=""/>
-              <img src={} alt=""/>
-              <img src={} alt=""/>
-              <img src={} alt=""/>
-              <img src={} alt=""/> */}
+                 {creators}
               </div>
               <b>64 major creators</b>
             </aside>

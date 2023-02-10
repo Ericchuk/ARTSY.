@@ -1,35 +1,42 @@
-section {
+.section {
   padding: 0 20px;
   color: var(--sec-color);
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-section h3 {
+.section h3 {
   font-family: "Clash Display", sans-serif;
   font-weight: var(--font-weight);
   font-size: 32px;
   line-height: 48px;
 }
-section p {
+.section p {
   font-family: "Satoshi";
   font-weight: var(--font-weight);
   font-size: 16px;
   line-height: 25px;
 }
-section aside {
+.section aside {
   position: relative;
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 60px 10px 30px;
+  margin: 60px 0px 30px;
 }
-section aside .img1 {
+.section aside img {
+  width: 100%;
+}
+.section aside .img1 {
   z-index: 3;
 }
-section aside .img2 {
+.section aside .img2 {
   position: absolute;
+  width: 110%;
 }
-section aside .img3 {
+.section aside .img3 {
   position: absolute;
+  width: 110%;
 }/*# sourceMappingURL=introductorySection.css.map */

@@ -1,7 +1,9 @@
-section {
+.section {
     padding: 0 20px;
     color:var(--sec-color);
     text-align: center;
+    display:flex;
+    flex-direction:column;
 
     h3 {
         font-family: 'Clash Display', sans-serif;
@@ -24,7 +26,11 @@ section {
         flex-direction:column;
         justify-content: center;
         align-items:center;
-        margin:60px 10px 30px;
+        margin:60px 0px 30px;
+
+        img{
+            width:100%;
+        }
 
         .img1{
             z-index:3;
@@ -33,11 +39,13 @@ section {
         .img2{
             // transform:rotate(-8deg);
             position:absolute;
+            width:110%;
         }
 
         .img3{
             // transform:rotate(9deg);
             position:absolute;
+            width:110%;
         }
     }
 }
