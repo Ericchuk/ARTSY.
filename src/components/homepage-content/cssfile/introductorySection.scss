@@ -1,0 +1,43 @@
+section {
+    padding: 0 20px;
+    color:var(--sec-color);
+    text-align: center;
+
+    h3 {
+        font-family: 'Clash Display', sans-serif;
+        font-weight: var(--font-weight);
+        font-size: 32px;
+        line-height: 48px;
+    }
+
+    p {
+        font-family: 'Satoshi';
+        font-weight: var(--font-weight);
+        font-size: 16px;
+        line-height:25px ;
+    }
+
+    aside{
+        position:relative;
+        display:flex;
+        width:100%;
+        flex-direction:column;
+        justify-content: center;
+        align-items:center;
+        margin:60px 10px 30px;
+
+        .img1{
+            z-index:3;
+        }
+
+        .img2{
+            // transform:rotate(-8deg);
+            position:absolute;
+        }
+
+        .img3{
+            // transform:rotate(9deg);
+            position:absolute;
+        }
+    }
+}

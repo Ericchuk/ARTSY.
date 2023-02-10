@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@400;700&family=League+Spartan:wght@500;700&family=Lobster&family=Overpass:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Poppins:wght@400;700;800&family=Quicksand:wght@400;500;700&family=STIX+Two+Text:wght@400;500&display=swap');
+
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 20px;
+    width:100%;
+
+    h2{
+        font-family: 'STIX Two Text', serif;
+    }
+
+    aside{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img{
+            margin:0 10px;
+        }
+
+        div{
+            position: relative;
+            margin:0 5px 0 0;
+
+            .ellipse{
+                position: absolute;
+                top:-3px;
+                right:0;
+            }
+        }
+    }
+
+    nav{
+        position: absolute;
+    }
+}
