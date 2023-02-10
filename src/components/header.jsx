@@ -7,6 +7,7 @@ import Navbar from './navbar';
 import { useState } from 'react';
 
 
+
 export default function Header(){
 
     const [isOpen, setIsOpen] = useState(false);
@@ -16,6 +17,7 @@ export default function Header(){
     }
     return(
         <header>
+            
             <img src={hamburger} alt="hamburger" onClick={openNav}/>
             <h2>ARTSY.</h2>
             <aside>

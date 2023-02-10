@@ -9,6 +9,7 @@ import ellipse16 from '../img/Ellipse 16.png';
 import ellipse17 from '../img/Ellipse 17.png';
 import ellipse18 from '../img/Ellipse 18.png';
 import './cssfile/featuredSection.css';
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@400,500&display=swap" rel="stylesheet" />
 
 export default function FeaturedProduct() {
 
@@ -35,10 +36,10 @@ export default function FeaturedProduct() {
         <aside>
           <div>
             <div>
-              <img src={booleanEgyptian} alt="lady" />
+              <img src={booleanEgyptian} alt="lady" className="layedImg"/>
               <h4>Boolean Egyptian</h4>
               <div className="arrow-container">
-                <img src={arrow} alt="" />
+                <img src={arrow} alt="" className="arrow"/>
                 <img src={ellipse} alt="" />
               </div>
             </div>
@@ -47,7 +48,7 @@ export default function FeaturedProduct() {
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor pur
             </p>
-            <aside>
+            <aside className="creators-area">
               <div>
                 {creators}
               </div>
@@ -61,10 +62,10 @@ export default function FeaturedProduct() {
         <aside>
           <div>
             <div>
-              <img src={areWeThereYet} alt="" />
-              <h4>Are We There Yet</h4>
+              <img src={areWeThereYet} alt="" className="layedImg"/>
+              <h4>Are We There Yet?</h4>
               <div className="arrow-container">
-                <img src={arrow} alt="" />
+                <img src={arrow} alt="" className="arrow"/>
                 <img src={ellipse} alt="" />
               </div>
             </div>
@@ -73,7 +74,7 @@ export default function FeaturedProduct() {
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor pur
             </p>
-            <aside>
+            <aside className="creators-area">
               <div>
                 {creators}
               </div>
@@ -87,10 +88,10 @@ export default function FeaturedProduct() {
         <aside>
           <div>
             <div>
-              <img src={oloibori} alt="" />
+              <img src={oloibori} alt="" className="layedImg"/>
               <h4>Oloibiri 1997</h4>
               <div className="arrow-container">
-                <img src={arrow} alt="" />
+                <img src={arrow} alt="" className="arrow"/>
                 <img src={ellipse} alt="" />
               </div>
             </div>
@@ -99,7 +100,7 @@ export default function FeaturedProduct() {
               aliquam, purus sit amet luctus venenatis, lectus magna fringilla
               urna, porttitor rhoncus dolor pur
             </p>
-            <aside>
+            <aside className="creators-area">
               <div>
                  {creators}
               </div>

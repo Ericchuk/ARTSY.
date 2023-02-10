@@ -1,1 +1,80 @@
-/*# sourceMappingURL=featuredSection.css.map */
+.featured-section {
+  font-family: var(--font-family);
+  padding: 30px 10px;
+}
+.featured-section h3 {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 44px;
+}
+.featured-section aside {
+  padding: 20px 0;
+}
+.featured-section aside div > div {
+  position: relative;
+}
+.featured-section aside div > div > .layedImg {
+  width: 100%;
+}
+.featured-section aside div > div h4 {
+  font-family: "Clash Display", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 37px;
+  color: var(--primary-color);
+  position: absolute;
+  top: 60px;
+  text-align: center;
+  width: 100%;
+}
+.featured-section aside div > div .arrow-container {
+  position: absolute;
+  top: 130px;
+  right: 25px;
+}
+.featured-section aside div > div .arrow-container .arrow {
+  position: absolute;
+  left: 20px;
+  top: 24px;
+}
+.featured-section aside p {
+  font-family: "Satoshi", sans-serif;
+  font-weight: calc(var(--font-weight) - 100);
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--tie-color);
+  margin: 10px 0 20px;
+}
+.featured-section aside .creators-area {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 0.5px solid #000000;
+}
+.featured-section aside .creators-area div {
+  position: relative;
+  width: auto;
+}
+.featured-section aside .creators-area div img {
+  position: relative;
+}
+.featured-section aside .creators-area div img:nth-child(2) {
+  left: -15px;
+}
+.featured-section aside .creators-area div img:nth-child(3) {
+  left: -30px;
+}
+.featured-section aside .creators-area div img:nth-child(4) {
+  left: -45px;
+}
+.featured-section aside .creators-area div img:nth-child(5) {
+  left: -55px;
+}
+.featured-section aside .creators-area b {
+  font-size: 16px;
+  line-height: 22px;
+  position: relative;
+  left: -35px;
+  display: block;
+}/*# sourceMappingURL=featuredSection.css.map */

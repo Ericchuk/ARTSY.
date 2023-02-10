@@ -1,3 +1,9 @@
 :root {
   --primary-color:white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }/*# sourceMappingURL=landingPage.css.map */

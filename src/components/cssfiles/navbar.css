@@ -1,9 +1,11 @@
 :root {
   --primary-color: white;
   --sec-color: #333333;
+  --tie-color:#616161;
   --font-size:24px;
   --font-weight:500;
   --line-height:52px;
+  --font-family:satoshi, sans-serif;
 }
 
 .nav {
@@ -21,7 +23,7 @@
   align-items: center;
 }
 .nav header img {
-  width: 20px;
+  width: 17px;
 }
 .nav ul {
   list-style: none;
