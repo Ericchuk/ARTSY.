@@ -2,10 +2,22 @@
 
 
 header{
+
+    .hamburger-container{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width:60%;
+    }
+
     display:flex;
     justify-content: space-between;
     align-items: center;
     padding:20px 20px;
+
+    .cursor{
+        cursor:pointer;
+    }
 
     h2{
         font-family: 'STIX Two Text', serif;
@@ -30,9 +42,29 @@ header{
                 right:0;
             }
         }
+
+        .note-bell{
+            width:20px;
+        }
     }
 
-    nav{
-        position: absolute;
+}
+
+@media screen and (min-width:700px) {
+    header{
+        
+        .hamburger-container{
+            width:auto;
+        }
+
+        .hamburger{
+            display:none;
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    header{
+       justify-content: space-around; 
     }
 }

@@ -47,4 +47,40 @@
   position: absolute;
   bottom: 60px;
   right: 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .nav {
+    position: relative;
+    width: auto;
+    height: auto;
+  }
+  .nav header {
+    display: none;
+  }
+  .nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav ul li {
+    margin: 0 10px;
+  }
+  .nav ul a:nth-child(3) {
+    order: 2;
+  }
+  .nav ul a:nth-child(2) {
+    order: 3;
+  }
+  .nav ul a:nth-child(4) {
+    order: 4;
+  }
+  .msg-icon {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .nav ul li {
+    margin: 0 20px;
+  }
 }/*# sourceMappingURL=navbar.css.map */

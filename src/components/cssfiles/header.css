@@ -5,6 +5,15 @@ header {
   align-items: center;
   padding: 20px 20px;
 }
+header .hamburger-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+}
+header .cursor {
+  cursor: pointer;
+}
 header h2 {
   font-family: "STIX Two Text", serif;
 }
@@ -25,6 +34,20 @@ header aside div .ellipse {
   top: -3px;
   right: 0;
 }
-header nav {
-  position: absolute;
+header aside .note-bell {
+  width: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  header .hamburger-container {
+    width: auto;
+  }
+  header .hamburger {
+    display: none;
+  }
+}
+@media screen and (min-width: 1000px) {
+  header {
+    justify-content: space-around;
+  }
 }/*# sourceMappingURL=header.css.map */

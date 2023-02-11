@@ -4,7 +4,7 @@ import "./cssfiles/navbar.css";
 export default function Navbar({ isOpen, setIsOpen }) {
   function closeNav() {
     setIsOpen(!isOpen);
-  }
+  } 
   return (
     <nav className="nav">
       <header>
@@ -12,7 +12,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <img src={close} alt="closeNav" onClick={closeNav} />
       </header>
       <ul>
-        <a href="homr">
+        <a href="home">
           <li>Home</li>
         </a>
         <a href="tt">

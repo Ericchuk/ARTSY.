@@ -39,4 +39,55 @@
 .section aside .img3 {
   position: absolute;
   width: 110%;
+}
+
+@media screen and (min-width: 700px) {
+  .section {
+    margin: 10px 0 20px;
+  }
+  .section h3 {
+    font-weight: calc(var(--font-weight) + 100);
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .section p {
+    font-size: 22px;
+    margin: 20px 0 30px;
+    line-height: 156.7%;
+  }
+  .section .desktop-view {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .section .desktop-view img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .section {
+    margin: 10px 0 20px;
+  }
+  .section h3 {
+    font-size: 85px;
+    line-height: 125px;
+  }
+  .section p {
+    font-size: 28px;
+    margin: 20px 0 30px;
+    line-height: 156.7%;
+    margin: auto 13%;
+  }
+  .section .desktop-view {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+  }
+  .section .desktop-view img {
+    width: 45%;
+  }
+  .section .desktop-view .img3girl {
+    margin-bottom: 60px;
+  }
 }/*# sourceMappingURL=introductorySection.css.map */

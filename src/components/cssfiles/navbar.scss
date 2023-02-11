@@ -54,3 +54,49 @@
         right:10px;
     }
 }
+
+@media screen and (min-width:700px) {
+    .nav{
+        position: relative;
+        width:auto;
+        height: auto;
+
+            header{
+                display: none;
+            }
+
+            ul{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                li{
+                    margin:0 10px;
+                }
+
+                a:nth-child(3){
+                    order:2;
+                }
+                a:nth-child(2){
+                    order:3;
+                }
+                a:nth-child(4){
+                    order:4;
+                }
+            }
+    }
+
+    .msg-icon{
+        display: none;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .nav{
+        ul{
+            li{
+                margin:0 20px;
+            }
+        }
+    }
+}

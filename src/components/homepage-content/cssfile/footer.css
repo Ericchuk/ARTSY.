@@ -52,8 +52,7 @@ footer .footer-aside-1 .numb {
   font-weight: 700;
   font-size: 64px;
   line-height: 100px;
-  -webkit-text-decoration-line: line-through;
-          text-decoration-line: line-through;
+  text-decoration-line: line-through;
   color: #161616;
 }
 footer .newletter {

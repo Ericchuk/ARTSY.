@@ -1,9 +1,9 @@
 .section {
     padding: 0 20px;
-    color:var(--sec-color);
+    color: var(--sec-color);
     text-align: center;
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
 
     h3 {
         font-family: 'Clash Display', sans-serif;
@@ -16,36 +16,98 @@
         font-family: 'Satoshi';
         font-weight: var(--font-weight);
         font-size: 16px;
-        line-height:25px ;
+        line-height: 25px;
     }
 
-    aside{
-        position:relative;
-        display:flex;
-        width:100%;
-        flex-direction:column;
+    aside {
+        position: relative;
+        display: flex;
+        width: 100%;
+        flex-direction: column;
         justify-content: center;
-        align-items:center;
-        margin:60px 0px 30px;
+        align-items: center;
+        margin: 60px 0px 30px;
 
-        img{
-            width:100%;
+        img {
+            width: 100%;
         }
 
-        .img1{
-            z-index:3;
+        .img1 {
+            z-index: 3;
         }
 
-        .img2{
+        .img2 {
             // transform:rotate(-8deg);
-            position:absolute;
-            width:110%;
+            position: absolute;
+            width: 110%;
         }
 
-        .img3{
+        .img3 {
             // transform:rotate(9deg);
-            position:absolute;
-            width:110%;
+            position: absolute;
+            width: 110%;
         }
     }
+}
+
+@media screen and (min-width:700px) {
+    .section {
+        margin:10px 0 20px;
+        h3 {
+            font-weight: calc(var(--font-weight) + 100);
+            font-size: 50px;
+            line-height: 70px;
+        }
+
+        p {
+            font-size: 22px;
+            margin:20px 0 30px;
+            line-height: 156.7%;
+        }
+
+        .desktop-view{
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+
+            img{
+                width:50%;
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width:1000px) {
+    .section {
+        margin:10px 0 20px;
+
+        h3 {
+            font-size: 85px;
+            line-height: 125px;
+        }
+
+        p {
+            font-size: 28px;
+            margin:20px 0 30px;
+            line-height: 156.7%;
+            margin:auto 13%;
+        }
+
+        .desktop-view{
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-items: center;
+            gap:10px;
+
+            img{
+                width:45%;
+            }
+
+            .img3girl{
+                margin-bottom:60px;
+            }
+        }
+    }
+
 }
