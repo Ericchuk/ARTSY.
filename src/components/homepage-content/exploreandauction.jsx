@@ -1,4 +1,5 @@
 import exploreArrow from "../img/Vector (10).png";
+import './cssfile/exploreandauction.css'
 
 export default function Explore(){
 

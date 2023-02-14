@@ -81,6 +81,7 @@
                 letter-spacing: 0.065em;
                 width: 85%;
                 text-align: left;
+                font-family: "Clash display", sans-serif;
             }
         }
 
@@ -217,4 +218,60 @@
         }
 
     }
+}
+
+@media screen and (min-width:1000px){
+    .monalisa-style{
+        .monalisa{
+            width:380px;
+
+            img{
+                margin:10px 20px 0 10px;
+            }
+            h4{
+                font-size: 29.2313px;
+line-height: 33px;
+            }
+        }
+
+        .o1 {
+            margin: 10px 0px 0 40px;
+
+            div {
+                h3{
+                    font-size: 67.6122px;
+line-height: 77px;
+                }
+                p {
+                    font-size: 13.46px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                }
+            }
+
+            .p-container {
+                flex-direction: row;
+                justify-content: flex-start;
+                align-items: flex-start;
+                margin: 0 0 0 20px;
+
+                .p {
+                    
+
+                    p {
+                        font-weight: 500;
+font-size: 15.8576px;
+line-height: 21px;
+letter-spacing: 0.065em;
+text-transform: uppercase;
+                    }
+                }
+
+                .see-more {
+                    margin: 15px 0 0 0px;
+                    justify-content: center;
+                }
+            }
+    }
+}
 }
