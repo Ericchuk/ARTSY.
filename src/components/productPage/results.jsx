@@ -1,13 +1,10 @@
+import './cssfile/results.css'
+
 export default function Result({
-  productsArray,
-  currentPosts,
-  paginate,
-  pageNumbers,
-  currentPage
-}) {
+  productsArray, currentPage}) {
   return (
     <div className="results">
-      <p>Showing 1-5 of {productsArray.length} results</p>
+      <p>Showing {currentPage}-{productsArray.length / 5} of {productsArray.length} results</p>
     </div>
   );
 }

@@ -1,0 +1,43 @@
+.products > aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.products > aside div aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0 40px;
+}
+.products > aside div aside p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 157.6%;
+  /* or 25px */
+  color: #333333;
+  text-transform: uppercase;
+}
+.products .arrows-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.products .arrows-container .rotate p:first-child {
+  transform: rotate(180deg);
+}
+.products .arrows {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.products .red {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.products .red p {
+  margin: 0 10px 0 0;
+  font-size: 20px;
+  line-height: 157.6%;
+}/*# sourceMappingURL=products.css.map */

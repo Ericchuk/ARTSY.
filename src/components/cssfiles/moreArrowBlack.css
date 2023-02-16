@@ -1,0 +1,9 @@
+.arrow-container-black {
+  position: relative;
+  width: 60px;
+}
+.arrow-container-black .arrow-black {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+}/*# sourceMappingURL=moreArrowBlack.css.map */

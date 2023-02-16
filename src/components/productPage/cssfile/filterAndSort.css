@@ -1,0 +1,23 @@
+.filterAndSort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 15px;
+  margin: 25px 15px;
+  border-radius: 10px;
+  background: var(--primary-color);
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, 0.553);
+}
+.filterAndSort .filter,
+.filterAndSort .sort {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.filterAndSort .filter p,
+.filterAndSort .sort p {
+  margin-right: 10px;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}/*# sourceMappingURL=filterAndSort.css.map */

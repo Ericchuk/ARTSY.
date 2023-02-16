@@ -35,7 +35,7 @@ export default function ProductPage() {
     {id:19, img:Ellipsia, name: 'Ellipsia', price:11.00},
     {id:20, img:RoadToEgypt, name: 'The Lawmakers', price:30.00}
 ]
-  {console.log(productsArray.length)}
+
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = productsArray.slice(indexOfFirstPost, indexOfLastPost);
@@ -47,7 +47,7 @@ const products = currentPosts.map((product) => {
             <img src={product.img} alt={product.name} />
             <aside>
                 <p>{product.name}</p>
-                <p>{product.price}</p>
+                <p>${product.price}.00</p>
             </aside>
             
         </div>
@@ -66,11 +66,35 @@ function paginate(pageNumber){
   setCurrentPage(pageNumber)
 }
 
+function next(e){
+  e.preventDefault();
+  if(productsArray.length / 5 === 4 && currentPage === 4){
+    // setDone(false)
+    return;
+  }else{
+    setCurrentPage(currentPage + 1);
+    setDone(true);
+  }
+}
+
+function prev(e){
+  e.preventDefault();
+  if(productsArray.length / 5 === 4 && currentPage === 1){
+    setDone(false)
+    return;
+  }else{
+    setCurrentPage(currentPage - 1);
+    setDone(true);
+  }
+}
+
+const [done, setDone] =  useState(false);
+
   return (<section>
     <Href />
-    <Result productsArray={productsArray} />
+    <Result productsArray={productsArray} currentPage={currentPage}/>
     <FilterAndSort />
-    <Product products={products} currentPosts={currentPosts} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage}/>
+    <Product products={products} currentPosts={currentPosts} paginate={paginate} pageNumbers={pageNumbers} currentPage={currentPage} next={next} prev={prev} done={done}/>
   </section>) 
   
 }

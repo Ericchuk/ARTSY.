@@ -18,7 +18,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <a href="tt">
           <li>Auctions</li>
         </a>
-        <a href="tt">
+        <a href="Marketplace">
           <li>Marketplace</li>
         </a>
         <a href="tt">
