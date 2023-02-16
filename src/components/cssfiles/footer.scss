@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Baskervville&family=Bellefair&family=Gemunu+Libre:wght@400;700&family=League+Spartan:wght@500;700&family=Lobster&family=Overpass:ital,wght@0,400;0,700;1,400&family=Pacifico&family=Poppins:wght@400;700;800&family=Quicksand:wght@400;500;700&family=STIX+Two+Text:wght@400;500&display=swap');
+
+footer {
+    position: relative;
+    font-family: 'Clash Display', sans-serif;
+    overflow-x: hidden;
+
+    .newletter {
+        padding: 90px 20px 30px;
+
+        header {
+            display: block;
+            line-height: 2rem;
+            position:relative;
+        }
+
+        h2 {
+            font-family: 'Baskervville', serif;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 31px;
+            text-transform: uppercase;
+        }
+
+        >p {
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            text-transform: uppercase;
+            margin: 20px 0;
+        }
+
+        input {
+            width: 100%;
+            height: 50px;
+            border: 1px solid var(--sec-color);
+            padding: 10px 30px;
+            text-transform: uppercase;
+        }
+
+        button {
+            background: var(--sec-color);
+            text-transform: uppercase;
+            margin: 20px 0;
+            padding: 20px 60px;
+            color: var(--primary-color);
+            outline: none;
+            border: none;
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 17px;
+            margin: 10px 0;
+        }
+
+        div div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin: 15px 0 0;
+
+            img {
+                margin: 0 10px 0 0;
+            }
+        }
+
+
+    }
+
+    .copyright {
+        text-align: center;
+        padding: 0px 0 10px;
+    }
+}
+
+
+@media screen and (min-width:700px) {
+    footer {
+
+        .newletter {
+            padding: 130px 40px 30px;
+            text-align: center;
+
+            header {
+                display: block;
+                border: .5px solid black;
+                line-height: 2.5rem;
+                position:relative;
+
+                input {
+                    width: 70%;
+                    margin: 0 10px 0 0;
+                }
+
+                button {
+                    padding: 16px 30px;
+                }
+            }
+
+            aside {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                padding: 40px 0 20px;
+
+                .desk-footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    text-align: left;
+                    width: 60%;
+
+                    h2 {
+                        font-family: 'Clash Display', sans-serif;
+                        font-weight: 600;
+                        font-size: 28px;
+                        line-height: 59px;
+                    }
+
+                    ul {
+                        list-style-type: none;
+
+                        a {
+                            text-decoration: none;
+                            color: var(--sec-color);
+                            font-size: 16px;
+                            line-height: 16px;
+                            font-weight: 400;
+
+                            li {
+                                margin: 10px 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+    footer {
+       
+
+        .newletter {
+            aside {
+                .desk-footer {
+                    h2 {
+                        font-weight: 600;
+                        font-size: 48px;
+                        line-height: 59px;
+                    }
+
+                    ul {
+                        a {
+                            li {
+                                font-size: 26px;
+                                line-height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

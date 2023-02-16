@@ -1,0 +1,12 @@
+.href {
+  margin: 10px 0 0;
+  padding: 0 0 10px 20px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 52px;
+  /* identical to box height, or 286% */
+  color: #BCB7B7;
+}
+.href b {
+  color: var(--sec-color);
+}/*# sourceMappingURL=productHref.css.map */

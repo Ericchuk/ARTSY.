@@ -1,0 +1,160 @@
+.footer-aside-1 {
+  padding: 10px 10px 70px;
+  background: #E2E2E2;
+  position: relative;
+  width: 100%;
+}
+.footer-aside-1 > div {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 150%;
+  position: relative;
+}
+.footer-aside-1 > div > ul ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.footer-aside-1 > div > ul ul li {
+  font-family: "Clash display", sans-serif;
+  margin: 0 20px 0 0;
+}
+.footer-aside-1 > div h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 37px;
+  margin: 30px 0 10px;
+  width: 70%;
+}
+.footer-aside-1 > div p {
+  font-weight: 200;
+  font-size: 13px;
+  line-height: 17px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.57);
+}
+.footer-aside-1 h3 {
+  position: absolute;
+  top: 190px;
+  right: 30px;
+  font-size: 40px;
+}
+.footer-aside-1 img {
+  position: absolute;
+  top: 140px;
+  right: 110px;
+  z-index: 4;
+}
+.footer-aside-1 .numb {
+  position: absolute;
+  top: 220px;
+  right: 60px;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100px;
+  text-decoration-line: line-through;
+  color: #161616;
+}
+
+@media screen and (min-width: 700px) {
+  .footer-aside-1 {
+    padding: 20px 40px 150px;
+  }
+  .footer-aside-1 > div {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .footer-aside-1 > div h2 {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 155.5%;
+    margin: 0 0 10px;
+    width: 50%;
+    font-family: "Clash display", serif;
+  }
+  .footer-aside-1 > div > ul {
+    display: flex;
+    padding: 10px;
+    width: auto;
+  }
+  .footer-aside-1 > div > ul .indicator-container {
+    width: 10px;
+    height: 150px;
+    margin: 0 10px 0 0;
+    background: #AEAEAE;
+    border-radius: 50px;
+    transform: rotate(-180deg);
+  }
+  .footer-aside-1 > div > ul .indicator-container .indicator {
+    background: #292929;
+    border-radius: 50px;
+    height: 20%;
+  }
+  .footer-aside-1 > div > ul ul {
+    display: block;
+  }
+  .footer-aside-1 > div > ul ul li {
+    font-size: 25px;
+    line-height: 155.5%;
+  }
+  .footer-aside-1 p {
+    font-family: "Clash Display";
+    font-style: normal;
+    font-weight: 200;
+    font-size: 22px;
+    line-height: 130%;
+    /* or 42px */
+    color: rgba(0, 0, 0, 0.57);
+  }
+  .footer-aside-1 h3 {
+    font-family: "Clash Display", sans-serif;
+    top: 260px;
+    right: 100px;
+  }
+  .footer-aside-1 img {
+    width: 600px;
+    top: 90px;
+    right: 40px;
+  }
+  .footer-aside-1 .numb {
+    top: auto;
+    bottom: 0px;
+    right: 10px;
+    font-family: "Clash Display", sans-serif;
+    font-weight: 1000;
+    font-size: 100px;
+    line-height: 155.5%;
+  }
+}
+@media screen and (min-width: 700px) {
+  .footer-aside-1 {
+    padding: 40px 30px 300px;
+  }
+  .footer-aside-1 > div h2 {
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 155.5%;
+    width: 530px;
+  }
+  .footer-aside-1 p {
+    font-size: 32px;
+    line-height: 130%;
+  }
+  .footer-aside-1 h3 {
+    right: 25%;
+    top: 60%;
+  }
+  .footer-aside-1 img {
+    width: auto;
+    right: 15%;
+    top: 16%;
+  }
+  .footer-aside-1 .numb {
+    font-weight: 700;
+    font-size: 170px;
+    line-height: 155.5%;
+    right: 10%;
+  }
+}/*# sourceMappingURL=topCreator.css.map */

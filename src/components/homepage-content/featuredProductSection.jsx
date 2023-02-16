@@ -7,8 +7,7 @@ import oloiboriDesktop from "../img/Rectangle 299 (5).png";
 // import booleanEgyptianDesktopDark from "../img/Rectangle 299 (4).png";
 // import areWeThereYetDesktopDark from "../img/Rectangle 306.png";
 // import oloiboriDesktopDark from "../img/Rectangle 306 (1).png";
-import arrow from "../img/Vector (4).png";
-import ellipse from "../img/Ellipse 36.png";
+import More from '../moreArrow';
 import ellipse14 from "../img/Ellipse 14.png";
 import ellipse15 from "../img/Ellipse 15.png";
 import ellipse16 from "../img/Ellipse 16.png";
@@ -48,10 +47,7 @@ export default function FeaturedProduct() {
               )}
 
               {window.innerWidth < 699 ? <h4>Boolean Egyptian</h4> : <h4>View product</h4>}
-              <div className="arrow-container">
-                <img src={arrow} alt="" className="arrow" />
-                <img src={ellipse} alt="" />
-              </div>
+              <More />
             </div>
             <article>
               {window.innerWidth > 699 ? <h4>Boolean Egyptian</h4> : ""}
@@ -80,10 +76,7 @@ export default function FeaturedProduct() {
               )}
 
               {window.innerWidth < 699 ? <h4>Are We There Yet?</h4> : <h4>View product</h4>}
-              <div className="arrow-container">
-                <img src={arrow} alt="" className="arrow" />
-                <img src={ellipse} alt="" />
-              </div>
+              <More />
             </div>
             <article>
             {window.innerWidth > 699 ? <h4>Are we there yet</h4> : ""}
@@ -112,10 +105,7 @@ export default function FeaturedProduct() {
               )}
 
               {window.innerWidth < 699 ? <h4>Oloibiri 1997</h4> : <h4>View product</h4>}
-              <div className="arrow-container">
-                <img src={arrow} alt="" className="arrow" />
-                <img src={ellipse} alt="" />
-              </div>
+              <More />
             </div>
             <article>
             {window.innerWidth > 699 ? <h4>Oloibiri 1997</h4> : ""}
