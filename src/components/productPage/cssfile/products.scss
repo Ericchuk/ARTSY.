@@ -1,3 +1,5 @@
+// 2:15
+
 .products {
     >aside {
         display: flex;
@@ -6,6 +8,7 @@
         flex-direction: column;
 
         div {
+            cursor: pointer;
             aside {
                 display: flex;
                 justify-content: space-between;
@@ -25,25 +28,25 @@
     }
 
 
-    .arrows-container{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
+    .arrows-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        .rotate{
-            p:first-child{
+        .rotate {
+            p:first-child {
                 transform: rotate(180deg);
             }
-            
+
         }
     }
 
-    .arrows{
-        display:flex;
-        justify-content:flex-end;
-        align-items:center;
+    .arrows {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
     }
-    
+
     .red {
         display: flex;
         justify-content: flex-end;
@@ -55,4 +58,60 @@
             line-height: 157.6%;
         }
     }
+}
+
+@media screen and (min-width:700px) {
+    .products {
+        padding: 10px 20px;
+
+        >aside {
+            flex-direction: row;
+            justify-content:center;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 0 0 40px;
+
+            div {
+                margin: 0 10px;
+
+                img {
+                    border-radius: 10px;
+                    width:320px;
+                }
+
+                aside {
+                    display: block;
+
+                    p:last-child {
+                        font-weight: 1000;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .products-container2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+
+        .products {
+            position: relative;
+
+           > aside {
+                justify-content:center;
+                width:auto;
+
+                div{
+                    img{
+                        width:300px;
+                    }
+                }
+            }
+        }
+    }
+
 }

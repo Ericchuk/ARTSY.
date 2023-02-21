@@ -12,7 +12,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <img src={close} alt="closeNav" onClick={closeNav} />
       </header>
       <ul>
-        <a href="home">
+        <a href="/">
           <li>Home</li>
         </a>
         <a href="tt">

@@ -4,6 +4,7 @@ import ProductPage from "./productPage/productpage";
 import { Routes, Route} from 'react-router-dom';
 import Footer from "./footer";
 import './cssfiles/landingPage.css';
+import ProductDetailPage from "./productDetailPage/productDetailPage";
 
 export default function LandingPage() {
   return (
@@ -14,6 +15,7 @@ export default function LandingPage() {
         <Route path='/Marketplace' element={<ProductPage />} />
       </Routes>
       <Footer />
+      <ProductDetailPage />
     </article>
   );
 }

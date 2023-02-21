@@ -4,6 +4,9 @@
   align-items: center;
   flex-direction: column;
 }
+.products > aside div {
+  cursor: pointer;
+}
 .products > aside div aside {
   display: flex;
   justify-content: space-between;
@@ -40,4 +43,48 @@
   margin: 0 10px 0 0;
   font-size: 20px;
   line-height: 157.6%;
+}
+
+@media screen and (min-width: 700px) {
+  .products {
+    padding: 10px 20px;
+  }
+  .products > aside {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+  }
+  .products > aside div {
+    margin: 0 10px;
+  }
+  .products > aside div img {
+    border-radius: 10px;
+    width: 320px;
+  }
+  .products > aside div aside {
+    display: block;
+  }
+  .products > aside div aside p:last-child {
+    font-weight: 1000;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .products-container2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  }
+  .products-container2 .products {
+    position: relative;
+  }
+  .products-container2 .products > aside {
+    justify-content: center;
+    width: auto;
+  }
+  .products-container2 .products > aside div img {
+    width: 300px;
+  }
 }/*# sourceMappingURL=products.css.map */
