@@ -1,3 +1,5 @@
+import './cssfile/counter.css';
+
 export default function Counter(){
     return(
         <section className="counter">

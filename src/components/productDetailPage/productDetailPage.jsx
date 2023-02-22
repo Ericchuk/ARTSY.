@@ -5,6 +5,7 @@ import AddToCart from "./addTocart";
 import MoreInfo from "./moreInfo";
 import MoreFromCollection from "./moreFromCollection";
 import Href from "../productPage/productHref";
+import './cssfile/productDetailPage.css';
 
 export default function ProductDetailPage(){
     return(

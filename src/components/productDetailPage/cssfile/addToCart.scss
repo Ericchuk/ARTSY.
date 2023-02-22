@@ -1,0 +1,33 @@
+.addToCart {
+    margin: 15px 0;
+
+    aside {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        button {
+            padding: 10px 40px;
+            margin-right: 25px;
+            background: #3341C1;
+            border-radius: 4px;
+            outline: none;
+            border: none;
+            color: var(--primary-color);
+        }
+
+        div {
+            padding: 8px 15px;
+            margin: 0 0 0 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #161616;
+            border-radius: 4px;
+
+            img {
+                width: 85%;
+            }
+        }
+    }
+}

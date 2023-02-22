@@ -5,8 +5,12 @@ import bougie from '../img/Rectangle 256.png';
 import lost from '../img/Rectangle 258.png';
 import circa from '../img/Rectangle 260.png';
 import Fav from '../img/Vector (15).png';
+import './cssfile/moreFromCollection.css';
+import { useState } from 'react';
 
 export default function MoreFromCollection() {
+  const [id, setId] = useState(0); 
+
   const caroData = [
     {
       id: 0,
@@ -38,31 +42,44 @@ export default function MoreFromCollection() {
     },
   ];
 
-  const caroDataCollection = caroData.map((item) => {
-    return (
-      <div key={item.id}>
-        <img src={Fav} alt="favourite" />
-        <img src={item.img} alt={item.title} />
-        <div>
-          <p>{item.title}</p>
-          <div>
-            <img src={diamond} alt="diamond" />
-            <p>{item.price}</p>
-          </div>
-        </div>
-      </div>
-    );
-  });
+  function next(){
+    if(id === caroData.length - 1){
+        return
+    }else{
+        setId(id + 1)
+    } 
+}
+
+function prev(){
+    if(id === 0){
+        return
+    }else{
+        setId(id - 1)
+    }
+}
 
   return (
     <section className="moreFromCollection">
       <h3>More from this collection</h3>
-      <aside>{caroDataCollection}</aside>
+      {/* <aside>{caroDataCollection}</aside> */}
+      <aside>
+      <div>
+        <img src={Fav} alt="favourite" />
+        <img src={caroData[id].img} alt={caroData[id].title} />
+        <div>
+          <p>{caroData[id].title}</p>
+          <div>
+            <img src={diamond} alt="diamond" />
+            <p>{caroData[id].price}</p>
+          </div>
+        </div>
+      </div>
+      </aside>
       <div className="buttons">
-        <div className='img-container'>
+        <div className='img-container' onClick={prev}>
             <img src={arrowRight} alt="prev" className='arrowLeft'/>
         </div>
-        <div className='img-container'>
+        <div className='img-container' onClick={next}>
             <img src={arrowRight} alt="next"/>
         </div>
         

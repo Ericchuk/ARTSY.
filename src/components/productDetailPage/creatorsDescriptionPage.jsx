@@ -1,3 +1,6 @@
+import './cssfile/creatorsDescription.css';
+
+
 export default function creatorsDescription(){
     return(
         <section className="ceators">

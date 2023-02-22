@@ -1,0 +1,13 @@
+.description {
+  margin: 30px 0 0;
+  text-align: center;
+  margin: 10px 0;
+}
+.description div img {
+  width: 100%;
+}
+.description div aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}/*# sourceMappingURL=description.css.map */

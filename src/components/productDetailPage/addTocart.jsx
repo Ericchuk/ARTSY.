@@ -1,4 +1,5 @@
 import Fav from '../img/Vector (17).png';
+import './cssfile/addToCart.css'
 
 export default function AddToCart(){
     return(

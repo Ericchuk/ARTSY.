@@ -1,0 +1,22 @@
+.moreInfo {
+  margin: 25px 0;
+}
+.moreInfo aside {
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+}
+.moreInfo aside div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+.moreInfo aside div p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 157.6%;
+}
+.moreInfo aside div:nth-child(2) {
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+}/*# sourceMappingURL=moreInfo.css.map */
