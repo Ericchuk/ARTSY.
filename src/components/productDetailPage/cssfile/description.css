@@ -1,5 +1,4 @@
 .description {
-  margin: 30px 0 0;
   text-align: center;
   margin: 10px 0;
 }
@@ -10,4 +9,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+  .description {
+    border: 2px solid #333333;
+  }
+  .description div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .description div img {
+    width: 50%;
+    height: 50%;
+    border-right: 2px solid #333333;
+    padding: 20px;
+  }
+  .description div aside {
+    width: 60%;
+    padding: 15px 20px 10px;
+    border-bottom: 2px solid #333333;
+  }
 }/*# sourceMappingURL=description.css.map */

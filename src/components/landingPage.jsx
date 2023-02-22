@@ -10,12 +10,14 @@ export default function LandingPage() {
   return (
     <article>
       <Header />
-      <Routes>
+      {/* <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/Marketplace' element={<ProductPage />} />
-      </Routes>
-      <Footer />
+        <Route path='/:marketId' element={<ProductDetailPage />} />
+      </Routes>  */}
       <ProductDetailPage />
+      <Footer />
+      
     </article>
   );
 }

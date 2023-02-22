@@ -2,8 +2,8 @@
   margin: 25px 0;
 }
 .moreInfo aside {
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
 }
 .moreInfo aside div {
   display: flex;
@@ -17,6 +17,38 @@
   line-height: 157.6%;
 }
 .moreInfo aside div:nth-child(2) {
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333;
+  border-top: 2px solid #333333;
+  border-bottom: 2px solid #333333;
+}
+
+@media screen and (min-width: 700px) {
+  .moreInfo {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    margin: 10px 0;
+    width: 46%;
+  }
+  .moreInfo aside {
+    border-bottom: none;
+  }
+  .moreInfo aside div {
+    padding: 12px 20px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .moreInfo {
+    top: 36%;
+    left: 46%;
+  }
+  .moreInfo aside {
+    border-bottom: none;
+  }
+  .moreInfo aside div {
+    padding: 18px 10px;
+  }
+  .moreInfo aside div p {
+    font-size: 25px;
+    line-height: 97.6%;
+  }
 }/*# sourceMappingURL=moreInfo.css.map */

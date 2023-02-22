@@ -1,10 +1,33 @@
 .productDetailPage{
     padding:10px;
+    overflow-x:hidden;
     
     .href{
             width:100%;
             margin:10px 0px;
             padding:0px;
             border-bottom:2.5px solid #333333;
+    }
+}
+
+@media screen and (min-width:700px){
+    .productDetailPage{
+        padding:20px 30px;
+        position:relative;
+        
+        .href{
+            margin:10px 0 40px;
+            border:none;
+        }
+    }
+}
+
+@media screen and (min-width:1000px){
+    .productDetailPage{
+        padding:20px 8%;
+        
+        .href{
+            margin:10px 0 40px;
+        }
     }
 }

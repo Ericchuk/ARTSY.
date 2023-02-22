@@ -72,3 +72,70 @@
         }
     }
 }
+
+@media screen and  (min-width:700px){
+    .moreFromCollection{
+        // overflow-x:scroll;
+
+        h3{
+            box-shadow:2px 4px 8px 2px rgba(0, 0, 0, 0.389);
+            padding:20px;
+            border-radius:10px;
+        }
+
+        aside{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            width:180%;
+            padding:0;
+            margin:0;
+
+            >div{
+                margin:0 15px 0 0;
+                border:1px solid #333333;
+                padding:10px 20px;
+                
+                >img:nth-child(2){
+                    width:100%;
+                }
+
+                > div{
+                    margin:10px 0;
+                }
+            }
+        }
+
+        > div{
+            top:14px;
+            left:80%;
+            width:auto;
+
+            .img-container{
+                border:1px solid #333333;
+                margin:0 20px 0 0;
+
+                img{
+                    filter:invert(1);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px){
+    .moreFromCollection{
+        aside{
+            width:140%;
+        }
+
+        >div{
+            left:86%;
+            .img-container{
+                img{
+                    width:20%;
+                }
+            }
+        }
+    }
+}

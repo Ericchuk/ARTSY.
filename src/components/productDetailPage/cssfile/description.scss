@@ -1,18 +1,45 @@
-.description{
-    margin:30px 0 0;
+.description {
     text-align: center;
-    margin:10px 0;
+    margin: 10px 0;
 
-    div{
+    div {
 
-        img{
-            width:100%;
+        img {
+            width: 100%;
         }
-        
-        aside{
+
+        aside {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+    }
+}
+
+@media screen and (min-width:700px) {
+    .description {
+        border: 2px solid #333333;
+        // padding: 10px;
+
+        div {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+
+            img {
+                width: 50%;
+                height: 50%;
+                border-right:2px solid #333333;
+                padding:20px;
+            }
+
+
+            aside {
+                width: 60%;
+                padding:15px 20px 10px;
+                border-bottom:2px solid #333333;
+            }
+        }
+
     }
 }

@@ -31,3 +31,17 @@
         }
     }
 }
+
+@media screen and (min-width:700px){
+    .addToCart{
+        position:absolute;
+        top:26%;
+        left:53%;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .addToCart{
+        left:47%;
+    }
+}

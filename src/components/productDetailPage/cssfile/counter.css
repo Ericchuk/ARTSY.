@@ -14,4 +14,20 @@
   font-weight: 500;
   font-size: 30px;
   line-height: 97.6%;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 700px) {
+  .counter {
+    position: absolute;
+    top: 22.5%;
+    left: 53%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .counter {
+    position: absolute;
+    top: 22.5%;
+    left: 47%;
+  }
 }/*# sourceMappingURL=counter.css.map */
