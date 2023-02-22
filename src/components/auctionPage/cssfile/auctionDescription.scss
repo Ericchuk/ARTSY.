@@ -1,0 +1,73 @@
+.auction-description {
+    padding: 30px 10px;
+    position: relative;
+    overflow-x:hidden;
+
+
+    >p {
+        font-size: 20px;
+        line-height: 157%;
+    }
+
+    >aside {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        width: 175%;
+        margin: 20px 0 0;
+        position: relative;
+
+        .live-auction {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin: 0 10px 0 0;
+
+            img {
+                width: 100%;
+            }
+
+            .live-auction-time {
+                position: absolute;
+                margin-bottom: 20px;
+                padding: 10px;
+                background: rgba(245, 244, 244, 0.24);
+                border: 0.5px solid #FFFFFF;
+                backdrop-filter: blur(1.5px);
+                border-radius: 8px;
+                color: var(--primary-color);
+            }
+        }
+    }
+
+    .buttons {
+        position: absolute;
+        top: 55%;
+        width: 97%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+
+        .img-container {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 4.68154px 4.68154px 7.02232px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(4.68154px);
+            width: 30px;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+
+            img {
+                width: 30%;
+            }
+
+            .arrowLeft {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

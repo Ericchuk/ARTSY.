@@ -5,17 +5,21 @@ import { Routes, Route} from 'react-router-dom';
 import Footer from "./footer";
 import './cssfiles/landingPage.css';
 import ProductDetailPage from "./productDetailPage/productDetailPage";
+import AuctionPage from "./auctionPage/auctionPage";
+
 
 export default function LandingPage() {
   return (
     <article>
       <Header />
-      {/* <Routes>
+      <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/Marketplace' element={<ProductPage />} />
+        <Route path='/auction' element={<AuctionPage />} />
         <Route path='/:marketId' element={<ProductDetailPage />} />
-      </Routes>  */}
+      </Routes> 
       <ProductDetailPage />
+      
       <Footer />
       
     </article>

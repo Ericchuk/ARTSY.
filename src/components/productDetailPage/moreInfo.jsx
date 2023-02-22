@@ -21,7 +21,7 @@ export default function MoreInfo(){
         return(
             <div key={item.id}>
                 <p>{item.title}</p>
-                <img src={arrow} />
+                <img src={arrow} alt="arrow" />
             </div>
         )
     })
