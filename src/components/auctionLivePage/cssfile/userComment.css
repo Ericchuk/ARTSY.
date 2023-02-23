@@ -1,0 +1,65 @@
+.user-comment {
+  position: absolute;
+  bottom: 0%;
+  padding: 20px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.user-comment .text-area-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85%;
+  position: relative;
+}
+.user-comment .text-area-container input {
+  background-color: transparent;
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+  padding: 10px;
+  width: 100%;
+  color: var(--primary-color);
+}
+.user-comment .text-area-container input::-moz-placeholder {
+  color: var(--primary-color);
+}
+.user-comment .text-area-container input::placeholder {
+  color: var(--primary-color);
+}
+.user-comment .text-area-container img {
+  position: absolute;
+  right: 20px;
+}
+.user-comment .love-container {
+  background: rgba(255, 255, 255, 0.35);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-comment .love-container img {
+  width: 24px;
+}
+
+@media screen and (min-width: 1000px) {
+  .user-comment {
+    width: 40%;
+    right: 0;
+  }
+  .user-comment .text-area-container input {
+    border: 1px solid #333333;
+  }
+  .user-comment .text-area-container input::-moz-placeholder {
+    color: #333333;
+  }
+  .user-comment .text-area-container input::placeholder {
+    color: #333333;
+  }
+  .user-comment .love-container {
+    background-color: #333333;
+  }
+}/*# sourceMappingURL=userComment.css.map */

@@ -6,19 +6,21 @@ import Footer from "./footer";
 import './cssfiles/landingPage.css';
 import ProductDetailPage from "./productDetailPage/productDetailPage";
 import AuctionPage from "./auctionPage/auctionPage";
+import LiveStreamPage from "./auctionLivePage/liveStreamPage";
 
 
 export default function LandingPage() {
   return (
-    <article>
-      <Header />
+    <article className="landingPage">
+     <Header />
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/Marketplace' element={<ProductPage />} />
         <Route path='/auction' element={<AuctionPage />} />
-        <Route path='/:marketId' element={<ProductDetailPage />} />
+        <Route path='/livestream' element={<LiveStreamPage />} />
       </Routes> 
-      <ProductDetailPage />
+      {/* <ProductDetailPage /> */}
+      
       
       <Footer />
       

@@ -1,0 +1,120 @@
+.live-stream-comment{
+    position: absolute;
+    bottom:10%;
+    padding:0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    height: 230px;
+    overflow-y: hidden;
+
+    aside{
+        display: flex;
+        justify-content:flex-end;
+        align-items:flex-start;
+        flex-direction: column;
+        height: 100%;
+
+       > div{
+            display: flex;
+            align-items: center;
+            justify-content:flex-start;
+            gap:10px;
+            margin:0 0 10px;
+
+            div{
+                color:var(--primary-color);
+
+                h4{
+                    font-weight: 500;
+                }
+
+                p{
+                    font-weight: 100;
+                }
+            }
+        }
+    }
+
+    .love{
+        display: flex;
+        align-items: center;
+        justify-content:flex-end;
+        gap:10px;
+        flex-direction: column;
+        height:200px;
+
+        img{
+            position: relative;
+        }
+
+        img:first-child{
+            right:4px;
+            top:24px;
+            animation: opacityre 2.5s linear infinite;
+        }
+
+        img:nth-child(2){
+            right:19px;
+            top:18px;
+            animation: opacityre 2s 3s linear infinite;
+        }
+        img:nth-child(3){
+            right:0;
+            top:20px;
+            animation: opacityre 1.5s 3s linear infinite;
+        }
+        img:nth-child(4){
+            right:12px;
+            top:24px;
+            animation: opacityre 3s 3s linear infinite;
+        }
+        img:nth-child(5){
+            left:8px;
+            top:12px;
+            animation: opacityre 2s 3s linear infinite;
+        }
+        img:nth-child(6){
+            right:15px;
+            top:7px;
+            animation: opacityre 1s 3s linear infinite;
+        }
+    }
+}
+
+@keyframes opacityre {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+    .live-stream-comment{
+        width:40%;
+        height:auto;
+        right:0;
+        align-items: flex-end;
+
+        aside{
+            >div{
+                > img{
+                    width:40px;        
+                    }
+                div{
+                    color:var(--sec-color);
+
+                    
+                }
+            }
+        }
+
+        .love{
+            padding-bottom:30px;
+        }
+    }
+}

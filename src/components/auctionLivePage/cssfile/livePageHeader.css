@@ -1,0 +1,63 @@
+.live-stream-header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.live-stream-header .live-stream-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 10px;
+}
+.live-stream-header .live-stream-container h3 {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 157%;
+  color: var(--primary-color);
+}
+.live-stream-header .live-stream-container .live-stream-indicators {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.live-stream-header .live-stream-container .live-stream-indicators span {
+  border-radius: 5px;
+  color: var(--primary-color);
+  padding: 5px 10px;
+  line-height: 157%;
+  font-size: 13px;
+}
+.live-stream-header .live-stream-container .live-stream-indicators span:first-child {
+  background: #006CA2;
+  text-transform: uppercase;
+  margin: 0 10px 0 0;
+}
+.live-stream-header .live-stream-container .live-stream-indicators .eyes-container {
+  background: rgba(255, 255, 255, 0.4);
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.live-stream-header .live-stream-container .live-stream-indicators .eyes-container img {
+  margin: 0 5px 0 0;
+}
+.live-stream-header .live-stream-container .live-stream-indicators > img {
+  width: 15px;
+  filter: invert(100%);
+}
+
+@media screen and (min-width: 1000px) {
+  .live-stream-header {
+    width: 58%;
+    left: 0;
+  }
+  .live-stream-header .live-stream-container h3 {
+    font-size: 24px;
+    line-height: 157.6%;
+  }
+  .live-stream-header .live-stream-container .live-stream-indicators span {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}/*# sourceMappingURL=livePageHeader.css.map */

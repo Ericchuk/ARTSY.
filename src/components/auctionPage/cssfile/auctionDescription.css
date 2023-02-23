@@ -21,6 +21,7 @@
   justify-content: center;
   align-items: flex-end;
   margin: 0 10px 0 0;
+  cursor: pointer;
 }
 .auction-description > aside .live-auction img {
   width: 100%;
@@ -62,4 +63,23 @@
 }
 .auction-description .buttons .img-container .arrowLeft {
   transform: rotate(180deg);
+}
+
+@media screen and (min-width: 700px) {
+  .auction-description {
+    padding: 40px 30px;
+  }
+  .auction-description > p {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .auction-description > aside {
+    width: 130%;
+    margin: 20px 0;
+  }
+  .auction-description > aside .live-auction .live-auction-time {
+    font-size: 25px;
+    line-height: 64px;
+    padding: 5px 10px;
+  }
 }/*# sourceMappingURL=auctionDescription.css.map */

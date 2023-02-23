@@ -1,4 +1,5 @@
 import close from "./img/Vector (3).png";
+import { Link } from 'react-router-dom';
 import "./cssfiles/navbar.css";
 
 export default function Navbar({ isOpen, setIsOpen }) {
@@ -12,20 +13,20 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <img src={close} alt="closeNav" onClick={closeNav} />
       </header>
       <ul>
-        <a href="/">
+        <Link to="/"  onClick={closeNav}>
           <li>Home</li>
-        </a>
-        <a href="auction">
+        </Link>
+        <Link to="auction"  onClick={closeNav}>
           <li>Auctions</li>
-        </a>
-        <a href="Marketplace">
+        </Link>
+        <Link to="Marketplace"  onClick={closeNav}>
           <li>Marketplace</li>
-        </a>
-        <a href="tt">
+        </Link>
+        <Link to="tt"  onClick={closeNav}>
           <li>Drops</li>
-        </a>
+        </Link>
       </ul>
-      <div className="msg-icon">
+      <div className="msg-icon" onClick={closeNav}>
         <svg
           width="86"
           height="87"

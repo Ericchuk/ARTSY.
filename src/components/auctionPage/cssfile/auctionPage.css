@@ -1,3 +1,9 @@
 .auction-page {
   padding: 20px 10px;
+}
+
+@media screen and (min-width: 700px) {
+  .auction-page {
+    padding: 20px 30px;
+  }
 }/*# sourceMappingURL=auctionPage.css.map */

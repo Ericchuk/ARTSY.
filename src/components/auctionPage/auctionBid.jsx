@@ -30,6 +30,16 @@ export default function AuctionBid() {
       currentBid: "0.987ETH",
       fav: !fav,
     },
+    {
+      id: 2,
+      img: chairsOnRope,
+      name: "Chairs on th rope",
+      bidStart: "0.34 ETH",
+      creator: "Jacob Banks",
+      date: "12 / 08 / 22",
+      currentBid: "0.987ETH",
+      fav: !fav,
+    },
   ];
 
   const creator = creators.map((data) => {

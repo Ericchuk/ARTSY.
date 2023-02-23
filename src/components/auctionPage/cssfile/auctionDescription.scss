@@ -23,6 +23,7 @@
             justify-content: center;
             align-items: flex-end;
             margin: 0 10px 0 0;
+            cursor:pointer;
 
             img {
                 width: 100%;
@@ -67,6 +68,30 @@
 
             .arrowLeft {
                 transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@media screen and (min-width:700px){
+    .auction-description {
+        padding: 40px 30px;
+
+        >p{
+            font-size: 28px;
+line-height: 38px;
+        }
+
+        > aside{
+            width:130%;
+            margin:20px 0;
+
+            .live-auction{
+                .live-auction-time{
+                    font-size: 25px;
+line-height: 64px;
+padding:5px 10px;
+                }
             }
         }
     }
