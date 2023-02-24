@@ -1,0 +1,159 @@
+.drops > aside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+.drops > aside > div {
+  width: 100%;
+  margin: 20px 0 30px;
+  position: relative;
+}
+.drops > aside > div h2 {
+  margin: 15px 0;
+  text-transform: capitalize;
+}
+.drops > aside > div .description {
+  font-size: 15px;
+  line-height: 157%;
+  color: #616161;
+}
+.drops > aside > div .creator {
+  margin: 10px 0;
+}
+.drops > aside > div .creator span {
+  color: #006CA2;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 157%;
+  text-transform: capitalize;
+}
+.drops > aside > div .img-container {
+  position: relative;
+}
+.drops > aside > div .img-container img {
+  width: 100%;
+}
+.drops > aside > div .img-container .live,
+.drops > aside > div .img-container .upcoming,
+.drops > aside > div .img-container .ended {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 15px;
+  border-radius: 5px;
+}
+.drops > aside > div .img-container .upcoming {
+  background: #4693ED;
+}
+.drops > aside > div .img-container .live {
+  background: #3EA03B;
+}
+.drops > aside > div .img-container .ended {
+  background: #999EA5;
+}
+.drops > aside > div .img-container div {
+  text-align: left;
+  font-size: 14px;
+  line-height: 17px;
+  margin-top: 10px;
+  position: absolute;
+  top: 50%;
+  left: 9px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(245, 244, 244, 0.24);
+  border: 0.5px solid #FFFFFF;
+  -webkit-backdrop-filter: blur(1.5px);
+          backdrop-filter: blur(1.5px);
+  border-radius: 8px;
+  color: white;
+  padding: 10px 20px;
+  width: 95%;
+}
+.drops > aside > div .img-container div small {
+  font-size: 16px;
+  line-height: 175.5%;
+}
+.drops > aside > div .img-container div p {
+  font-size: 22px;
+  line-height: 136%;
+}
+
+@media screen and (min-width: 700px) {
+  .drops aside > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+  .drops aside > div h2 {
+    font-size: 36px;
+    line-height: 49px;
+  }
+  .drops aside > div .description {
+    font-size: 20px;
+    line-height: 157%;
+  }
+  .drops aside > div .creator {
+    font-size: 24px;
+    line-height: 157%;
+  }
+  .drops aside > div .img-container {
+    width: 65%;
+    height: 100%;
+  }
+  .drops aside > div .img-container > div {
+    display: block;
+  }
+  .drops aside > div .details-container {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .drops {
+    padding: 20px 50px;
+  }
+  .drops aside > div {
+    align-items: flex-end;
+    gap: 40px;
+  }
+  .drops aside > div .img-container {
+    width: 70%;
+    height: 100%;
+  }
+  .drops aside > div .img-container .live,
+  .drops aside > div .img-container .upcoming,
+  .drops aside > div .img-container .ended {
+    right: -140px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .drops aside > div .img-container .live {
+    right: -130px;
+  }
+  .drops aside > div .img-container .ended {
+    right: -110px;
+  }
+  .drops aside > div .img-container > div {
+    display: block;
+    top: 66%;
+    width: 80%;
+    left: 10%;
+  }
+  .drops aside > div .img-container > div p {
+    font-size: 30px;
+    line-height: 136%;
+  }
+  .drops aside > div .details-container {
+    width: 50%;
+  }
+  .drops aside > div .details-container a {
+    font-size: 20px;
+    line-height: 157%;
+    /* or 31px */
+    text-decoration-line: underline;
+  }
+}/*# sourceMappingURL=drops.css.map */

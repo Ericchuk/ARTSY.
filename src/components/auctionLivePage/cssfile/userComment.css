@@ -59,6 +59,9 @@
   .user-comment .text-area-container input::placeholder {
     color: #333333;
   }
+  .user-comment .text-area-container img {
+    filter: invert(100%);
+  }
   .user-comment .love-container {
     background-color: #333333;
   }

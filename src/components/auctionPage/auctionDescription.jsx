@@ -2,7 +2,8 @@ import First from "../img/Rectangle 250.png";
 import Second from "../img/Rectangle 248.png";
 import Third from "../img/Rectangle 249.png";
 import arrowRight from "../img/Vector (16).png";
-import './cssfile/auctionDescription.css'
+import './cssfile/auctionDescription.css';
+import { Link } from "react-router-dom";
 
 export default function AuctionDescription() {
   const liveAuctionArray = [
@@ -14,12 +15,12 @@ export default function AuctionDescription() {
 
   const live = liveAuctionArray.map((data) => {
     return (
-      <div className="live-auction" key={data.id}>
+      <Link to="livestream" className="live-auction" key={data.id}>
         <img src={data.img} alt="live story" />
         <div className="live-auction-time">
           <p>{data.time}</p>
         </div>
-      </div>
+      </Link>
     );
   });
 

@@ -1,0 +1,21 @@
+.drop-page{
+    padding:20px 10px;
+
+    .sort{
+        display:flex;
+        justify-content:flex-end;
+        align-items:center;
+        margin-bottom:40px;
+
+        p{
+            margin-right:20px;
+        }
+    }
+}
+
+
+@media screen and (min-width:700px) {
+    .drop-page{
+        padding:20px 30px;
+    }
+}

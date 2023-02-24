@@ -1,0 +1,198 @@
+.drops {
+    >aside {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        >div {
+            width: 100%;
+            margin: 20px 0 30px;
+            position: relative;
+
+            h2 {
+                margin: 15px 0;
+                text-transform: capitalize;
+            }
+
+            .description {
+                font-size: 15px;
+                line-height: 157%;
+                color: #616161;
+            }
+
+            .creator {
+                margin: 10px 0;
+
+                span {
+                    color: #006CA2;
+                    font-size: 20px;
+                    font-weight: 500;
+                    line-height: 157%;
+                    text-transform: capitalize;
+                }
+            }
+
+
+            .img-container {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .live,
+                .upcoming,
+                .ended {
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    text-transform: uppercase;
+                    color: var(--primary-color);
+                    padding: 5px 10px;
+                    font-size: 12px;
+                    line-height: 15px;
+                    border-radius: 5px;
+                }
+
+                .upcoming {
+                    background: #4693ED;
+                }
+
+                .live {
+                    background: #3EA03B;
+                }
+
+                .ended {
+                    background: #999EA5;
+                }
+
+                div {
+                    text-align: left;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-top: 10px;
+                    position: absolute;
+                    top: 50%;
+                    left: 9px;
+                    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), rgba(245, 244, 244, 0.24);
+                    border: 0.5px solid #FFFFFF;
+                    backdrop-filter: blur(1.5px);
+                    border-radius: 8px;
+                    color: white;
+                    padding: 10px 20px;
+                    width: 95%;
+
+                    small {
+                        font-size: 16px;
+                        line-height: 175.5%;
+                    }
+
+                    p {
+                        font-size: 22px;
+                        line-height: 136%;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (min-width:700px) {
+    .drops {
+        aside {
+            >div {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 20px;
+
+                h2 {
+                    font-size: 36px;
+                    line-height: 49px;
+                }
+
+                .description {
+                    font-size: 20px;
+                    line-height: 157%;
+                }
+
+                .creator {
+                    font-size: 24px;
+                    line-height: 157%;
+                }
+
+                .img-container {
+                    width: 65%;
+                    height: 100%;
+
+                    >div {
+                        display: block;
+                    }
+                }
+
+                .details-container {
+                    width: 30%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .drops {
+        padding: 20px 50px;
+
+        aside {
+            >div {
+                align-items: flex-end;
+                gap: 40px;
+
+                .img-container {
+                    width: 70%;
+                    height: 100%;
+
+                    .live,
+                    .upcoming,
+                    .ended {
+                        right: -140px;
+                        font-size: 15px;
+                        line-height: 22px;
+                    }
+
+                    .live {
+                        right: -130px;
+                    }
+
+                    .ended {
+                        right: -110px;
+                    }
+
+                    >div {
+                        display: block;
+                        top: 66%;
+                        width: 80%;
+                        left: 10%;
+
+                        p {
+                            font-size: 30px;
+                            line-height: 136%;
+                        }
+                    }
+                }
+
+                .details-container {
+                    width: 50%;
+
+                    a {
+                        font-size: 20px;
+                        line-height: 157%;
+                        /* or 31px */
+                        text-decoration-line: underline;
+                    }
+                }
+            }
+        }
+    }
+}

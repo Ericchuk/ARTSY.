@@ -46,6 +46,12 @@ export default function LiveStreamComment(){
             img:ellaImage,
         },
         {
+            id:4,
+            name:"Flynn Parker",
+            comment:"movement",
+            img:edogo,
+        },
+        {
             id:5,
             name:"Ella Flynn",
             comment:"Tight bid",

@@ -4,9 +4,10 @@ import ProductPage from "./productPage/productpage";
 import { Routes, Route} from 'react-router-dom';
 import Footer from "./footer";
 import './cssfiles/landingPage.css';
-import ProductDetailPage from "./productDetailPage/productDetailPage";
+// import ProductDetailPage from "./productDetailPage/productDetailPage";
 import AuctionPage from "./auctionPage/auctionPage";
 import LiveStreamPage from "./auctionLivePage/liveStreamPage";
+import DropPage from "./drops/dropPage";
 
 
 export default function LandingPage() {
@@ -17,7 +18,8 @@ export default function LandingPage() {
         <Route path='/' element={<Homepage />} />
         <Route path='/Marketplace' element={<ProductPage />} />
         <Route path='/auction' element={<AuctionPage />} />
-        <Route path='/livestream' element={<LiveStreamPage />} />
+        <Route path='/auction/livestream' element={<LiveStreamPage />} />
+        <Route path='/drop' element={<DropPage />} />
       </Routes> 
       {/* <ProductDetailPage /> */}
       

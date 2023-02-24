@@ -1,0 +1,56 @@
+.drop-description {
+    padding: 30px 0px;
+    text-align: center;
+
+    h2 {
+        font-size: 30px;
+        line-height: 62px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 157%;
+        text-align: center;
+        color: #616161;
+    }
+
+    button {
+        width: 80%;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 40px;
+        margin: 30px 0 0;
+        background: transparent;
+        border: 1px solid #333333;
+        border-radius: 5px;
+    }
+}
+
+@media screen and (min-width:700px){
+    .drop-description{
+        button{
+            width: 40%;
+        }
+    }
+}
+
+@media screen and (min-width:1000px) {
+    .drop-description {
+        h2 {
+            font-size: 48px;
+            line-height: 175.5%;
+        }
+
+        p {
+            font-size: 32px;
+            line-height: 64px;
+        }
+
+        button {
+            width: 40%;
+            font-size: 36px;
+            line-height: 64px;
+        }
+    }
+}

@@ -22,7 +22,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <Link to="Marketplace"  onClick={closeNav}>
           <li>Marketplace</li>
         </Link>
-        <Link to="tt"  onClick={closeNav}>
+        <Link to="drop"  onClick={closeNav}>
           <li>Drops</li>
         </Link>
       </ul>

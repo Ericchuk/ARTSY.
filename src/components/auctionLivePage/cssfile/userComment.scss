@@ -61,6 +61,10 @@
             input::placeholder{
                 color: #333333;
             }
+
+            img{
+                filter: invert(100%);
+            }
         }
 
         .love-container{
