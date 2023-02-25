@@ -33,8 +33,13 @@
 }
 
 @media screen and (min-width: 700px) {
-  .desktop-choice-in-container {
+  .desktop-with-shipping {
+    width: 100%;
+  }
+  .desktop-without-shipping {
     width: 70%;
+  }
+  .desktop-choice-in-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,10 +56,21 @@
     color: #292929;
     border-bottom: 0.5px solid black;
   }
+  .desktop-choice-in-container .picked {
+    color: #292929;
+    border-bottom: 0.5px solid black;
+  }
+  .desktop-choice-in-container .not-choice {
+    color: #888888;
+    border-bottom: none;
+  }
 }
 @media screen and (min-width: 1000px) {
-  .desktop-choice-in-container {
-    width: 50%;
+  .desktop-with-shipping {
+    width: 100%;
+  }
+  .desktop-without-shipping {
+    width: 70%;
   }
   .desktop-choice-in-container .choice {
     font-size: 24px;

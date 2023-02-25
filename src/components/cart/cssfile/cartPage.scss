@@ -5,6 +5,14 @@
 @media screen and (min-width:700px){
     .cart{
         padding:10px 0px;
+   
+    }
+
+    .with-shipping{
+        display:flex;
+        justify-content:center;
+        align-items:flex-start;
+        flex-direction:row-reverse;
     }
 }
 

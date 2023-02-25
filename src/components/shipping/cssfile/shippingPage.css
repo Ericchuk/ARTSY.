@@ -1,0 +1,19 @@
+.shippingPage {
+  padding: 20px;
+  width: 100%;
+}
+.shippingPage > p {
+  padding: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .shippingPage {
+    width: 55%;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .shippingPage {
+    width: 40%;
+    padding: 10px;
+  }
+}/*# sourceMappingURL=shippingPage.css.map */

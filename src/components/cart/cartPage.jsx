@@ -1,17 +1,32 @@
-import Href from '../productPage/productHref';
-import ChoiceInCart from './choiceInCart';
-import ItemsInCart from './ItemsInCart';
-import CartCard from './cartCard'
-import './cssfile/cartPage.css';
+import {useState} from "react";
+import Href from "../productPage/productHref";
+import ChoiceInCart from "./choiceInCart";
+import ItemsInCart from "./ItemsInCart";
+import CartCard from "./cartCard";
+import ShippingPage from "../shipping/shippingPage";
+import "./cssfile/cartPage.css";
 
+export default function Cart() {
+    const [shipping,setShipping] = useState(false);
 
-export default function Cart(){
-    return(
-        <section className="cart">
-            <Href />
-            <ChoiceInCart />
-            <ItemsInCart />
-            <CartCard />
-        </section>
-    )
+    function changeShipping(){
+        setShipping(true);
+    }
+
+    function removeShipping(){
+        setShipping(false);
+    }
+
+  return (
+    <section className={shipping ? "with-shipping" : "cart"}>
+      <section>
+       {!shipping ? <Href /> : ""}
+        <ChoiceInCart changeShipping={changeShipping}  shipping={shipping} />
+        <ItemsInCart />
+        <CartCard shipping={shipping} />
+      </section>
+
+      {window.innerWidth > 699 && shipping ? <ShippingPage removeShipping={removeShipping} /> : ""}
+    </section>
+  );
 }

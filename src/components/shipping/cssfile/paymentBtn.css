@@ -1,0 +1,27 @@
+.paymentBtn {
+  width: 100%;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 20px 0;
+}
+.paymentBtn button {
+  width: 70%;
+  background: #3341C1;
+  border-radius: 4px;
+  color: #FFFFFF;
+  padding: 15px 0;
+  border: none;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+}
+.paymentBtn p {
+  width: 100%;
+  display: block;
+  font-size: 18px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  color: #006CA2;
+  margin: 20px 0 0;
+}/*# sourceMappingURL=paymentBtn.css.map */

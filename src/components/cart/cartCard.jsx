@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./cssfile/cartCard.css";
 
-export default function CartCard() {
+export default function CartCard({shipping}) {
   return (
     <section className="cart-card">
       <aside>
@@ -33,10 +33,10 @@ export default function CartCard() {
         </div>
       </aside>
 
-      <aside>
-        <button>Proceed to checkout</button>
+     {!shipping ? <aside>
+        <a href="cart/shipping"><button>Proceed to checkout</button></a>
         <Link to="/marketplace">Continue shopping</Link>
-      </aside>
+      </aside> : ""}
     </section>
   );
 }

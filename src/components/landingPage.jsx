@@ -9,6 +9,7 @@ import AuctionPage from "./auctionPage/auctionPage";
 import LiveStreamPage from "./auctionLivePage/liveStreamPage";
 import DropPage from "./drops/dropPage";
 import CartPage from "./cart/cartPage";
+import ShippingPage from "./shipping/shippingPage";
 
 
 export default function LandingPage() {
@@ -22,9 +23,10 @@ export default function LandingPage() {
         <Route path='/auction/livestream' element={<LiveStreamPage />} />
         <Route path='/drop' element={<DropPage />} />
         <Route path='/cart' element={<CartPage />} />
+        <Route path='/cart/shipping' element={<ShippingPage />} />
       </Routes> 
       {/* <ProductDetailPage /> */}
-      
+      {/* <ShippingPage /> */}
       
       <Footer />
       
