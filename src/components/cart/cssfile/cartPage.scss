@@ -1,0 +1,15 @@
+.cart{
+    padding:10px;
+}
+
+@media screen and (min-width:700px){
+    .cart{
+        padding:10px 0px;
+    }
+}
+
+@media screen and (min-width:1000px){
+    .cart{
+        padding:10px 70px;
+    }
+}

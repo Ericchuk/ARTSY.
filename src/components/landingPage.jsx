@@ -8,6 +8,7 @@ import './cssfiles/landingPage.css';
 import AuctionPage from "./auctionPage/auctionPage";
 import LiveStreamPage from "./auctionLivePage/liveStreamPage";
 import DropPage from "./drops/dropPage";
+import CartPage from "./cart/cartPage";
 
 
 export default function LandingPage() {
@@ -20,6 +21,7 @@ export default function LandingPage() {
         <Route path='/auction' element={<AuctionPage />} />
         <Route path='/auction/livestream' element={<LiveStreamPage />} />
         <Route path='/drop' element={<DropPage />} />
+        <Route path='/cart' element={<CartPage />} />
       </Routes> 
       {/* <ProductDetailPage /> */}
       
