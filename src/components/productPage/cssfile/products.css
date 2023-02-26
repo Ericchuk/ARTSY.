@@ -81,6 +81,11 @@
     align-items: flex-start;
     width: 100%;
   }
+  .products-container2 .filter .desktop-filter {
+    display: block;
+    border: none;
+    padding: 0 0 0 10px;
+  }
   .products-container2 .products {
     position: relative;
   }

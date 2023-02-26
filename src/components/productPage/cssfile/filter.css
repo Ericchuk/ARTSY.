@@ -63,6 +63,10 @@
 }
 
 @media screen and (min-width: 700px) {
+  .filter .desktop-filter {
+    border: 2px solid red;
+    display: none;
+  }
   .filter aside ul {
     width: 45%;
   }

@@ -124,7 +124,7 @@
                 }
 
                 .img-container {
-                    width: 65%;
+                    width: 55%;
                     height: 100%;
 
                     >div {
@@ -133,7 +133,12 @@
                 }
 
                 .details-container {
-                    width: 30%;
+                    width: 40%;
+
+                    h2{
+                        font-size:30px;
+                        margin:10px 0;
+                    }
                 }
             }
         }

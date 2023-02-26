@@ -22,4 +22,21 @@
   font-size: 18px;
   line-height: 24px;
   color: #000000;
+}
+
+@media screen and (min-width: 1000px) {
+  .filterAndSort {
+    width: 70%;
+    text-align: left;
+    position: relative;
+    left: 23%;
+  }
+  .filterAndSort .sort {
+    border: 0.4px solid #000000;
+    border-radius: 8px;
+    width: 2050%;
+    justify-content: flex-end;
+    padding: 10px 5px;
+    border-radius: 10px;
+  }
 }/*# sourceMappingURL=filterAndSort.css.map */

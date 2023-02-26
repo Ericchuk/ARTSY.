@@ -1,0 +1,122 @@
+.wallet-type {
+    .secured {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 10px 0;
+
+        img {
+            margin: 0 10px 0 0;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 157.6%;
+            color: #747474;
+        }
+    }
+
+    .wallet {
+        margin: 15px 0;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        input {
+            margin: 0 10px;
+            padding: 5px;
+        }
+
+        label {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 27px;
+            color: #292929;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 157.6%;
+        color: #616161;
+    }
+
+    .wallets {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+
+        div {
+            margin: 0;
+            cursor: pointer;
+        }
+
+        div:last-child {
+            padding: 10px;
+            border: 0.5px solid #333333;
+            filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.25));
+            border-radius: 20px;
+        }
+    }
+}
+
+@media screen and (min-width:700px) {
+    .wallet-type {
+        position: relative;
+
+        .desk-secured {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row-reverse;
+
+            div {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                img {
+                    margin: 0 10px 0 0;
+                }
+            }
+        }
+
+        >p {
+            font-size: 24px;
+            line-height: 157.6%;
+            margin: 30px 0 0;
+            width: 50%;
+            color: #616161;
+        }
+
+        .wallet {
+            label {
+                font-weight: 500;
+                font-size: 28px;
+                line-height: 38px;
+                color: #292929;
+            }
+        }
+
+        .wallets {
+            margin: 20px 0;
+            position: absolute;
+            top: 0px;
+            left: 40%;
+        }
+    }
+}
+
+
+@media screen and (min-width:1000px) {
+    .wallet-type {
+        padding: 20px 30px;
+
+        .wallets{
+            top:10px;
+            left:35%;
+        }
+    }
+}

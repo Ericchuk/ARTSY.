@@ -23,7 +23,7 @@ export default function Cart() {
        {!shipping ? <Href /> : ""}
         <ChoiceInCart changeShipping={changeShipping}  shipping={shipping} />
         <ItemsInCart />
-        <CartCard shipping={shipping} />
+        <CartCard shipping={shipping} changeShipping={changeShipping}   />
       </section>
 
       {window.innerWidth > 699 && shipping ? <ShippingPage removeShipping={removeShipping} /> : ""}

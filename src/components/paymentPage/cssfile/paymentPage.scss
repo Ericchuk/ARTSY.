@@ -1,0 +1,21 @@
+.payment-page{
+    padding:10px;
+
+    > p{
+        padding:0;
+    }
+}
+
+@media screen and (min-width:700px){
+    .payment-page-container{
+        width:100%;
+        min-height:85vh;
+        position:relative;
+
+        .payment-page{
+            top:0;
+            width:100%;
+            padding:20px;
+        }
+    }
+}

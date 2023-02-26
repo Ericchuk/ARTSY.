@@ -102,14 +102,18 @@
     line-height: 157%;
   }
   .drops aside > div .img-container {
-    width: 65%;
+    width: 55%;
     height: 100%;
   }
   .drops aside > div .img-container > div {
     display: block;
   }
   .drops aside > div .details-container {
-    width: 30%;
+    width: 40%;
+  }
+  .drops aside > div .details-container h2 {
+    font-size: 30px;
+    margin: 10px 0;
   }
 }
 @media screen and (min-width: 1000px) {

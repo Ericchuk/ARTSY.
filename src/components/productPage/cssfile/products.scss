@@ -6,13 +6,15 @@
         justify-content: space-between;
         align-items: center;
         flex-direction: column;
-        padding:10px;
+        padding: 10px;
 
         div {
-            img{
-                width:100%;
+            img {
+                width: 100%;
             }
+
             cursor: pointer;
+
             aside {
                 display: flex;
                 justify-content: space-between;
@@ -70,7 +72,7 @@
 
         >aside {
             flex-direction: row;
-            justify-content:center;
+            justify-content: center;
             align-items: center;
             flex-wrap: wrap;
             margin: 0 0 40px;
@@ -80,7 +82,7 @@
 
                 img {
                     border-radius: 10px;
-                    width:320px;
+                    width: 320px;
                 }
 
                 aside {
@@ -102,16 +104,25 @@
         align-items: flex-start;
         width: 100%;
 
+        .filter {
+    
+            .desktop-filter {
+                display:block;
+                border:none;
+                padding:0 0 0 10px;
+            }
+        }
+
         .products {
             position: relative;
 
-           > aside {
-                justify-content:center;
-                width:auto;
+            >aside {
+                justify-content: center;
+                width: auto;
 
-                div{
-                    img{
-                        width:300px;
+                div {
+                    img {
+                        width: 300px;
                     }
                 }
             }

@@ -2,7 +2,6 @@
 
 
 header{
-    
     .hamburger-container{
         display:flex;
         justify-content: space-between;
@@ -52,7 +51,6 @@ header{
 
 @media screen and (min-width:700px) {
     header{
-        
         .hamburger-container{
             width:auto;
         }

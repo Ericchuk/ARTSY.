@@ -29,8 +29,8 @@ export default function Filter() {
         </div>
       )}
 
-      {hover ? (
-        <aside>
+      {/* {hover ? ( */}
+        <aside className="desktop-filter">
           <header>
             <img src={filter} alt="filter icon" className="" />
             <h4>Filter</h4>
@@ -84,9 +84,9 @@ export default function Filter() {
             </li>
           </ul>
         </aside>
-      ) : (
+      {/* ) : (
         ""
-      )}
+      )} */}
     </div>
   );
 }

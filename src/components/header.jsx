@@ -20,6 +20,12 @@ export default function Header() {
     }
   };
 
+  window.onclick = () => {
+    if (window.innerWidth > 699) {
+      setIsOpen(true);
+    }
+  };
+
   return (
     <header>
       <article className="hamburger-container">
@@ -28,6 +34,7 @@ export default function Header() {
           altarticle="hamburger"
           onClick={openNav}
           className="cursor hamburger"
+          alt="menu"
         />
         <h2>ARTSY.</h2>
       </article>
