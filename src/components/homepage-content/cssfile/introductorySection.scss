@@ -52,7 +52,8 @@
 
 @media screen and (min-width:700px) {
     .section {
-        margin:10px 0 20px;
+        margin: 10px 0 20px;
+
         h3 {
             font-weight: calc(var(--font-weight) + 100);
             font-size: 50px;
@@ -61,17 +62,18 @@
 
         p {
             font-size: 22px;
-            margin:20px 0 30px;
+            margin: 20px 0 30px;
             line-height: 156.7%;
         }
 
-        .desktop-view{
+        .desktop-view {
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
 
-            img{
-                width:50%;
+
+            img {
+                width: 50%;
             }
         }
     }
@@ -80,7 +82,7 @@
 
 @media screen and (min-width:1000px) {
     .section {
-        margin:10px 0 20px;
+        margin: 10px 0 20px;
         overflow-x: hidden;
 
         h3 {
@@ -90,25 +92,53 @@
 
         p {
             font-size: 28px;
-            margin:20px 0 30px;
+            margin: 20px 0 30px;
             line-height: 156.7%;
-            margin:auto 13%;
+            margin: auto 13%;
         }
 
-        .desktop-view{
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            gap:10px;
+        .the-cover {
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            flex-direction:row;
+            // border:2px solid red;
+            width:100%;
+            gap:20px;
 
-            img{
-                width:45%;
+            .desktop-view {
+                flex-direction: row;
+                flex-wrap: nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 10px;
+                // border: 2px solid red;
+                width: 25%;
+                height: 30%;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                }
+
+                .img3girl {
+                    margin-bottom: 60px;
+                }
             }
 
-            .img3girl{
-                margin-bottom:60px;
+            .desktop-view-1{
+                justify-content:flex-start;
+                padding:0 0 0 25px;
+            }
+            .desktop-view-2{
+                justify-content:flex-start;
+            }
+
+            .desktop-view-3{
+                justify-content:space-between;
             }
         }
+
     }
 
 }

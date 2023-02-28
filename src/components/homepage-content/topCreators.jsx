@@ -7,17 +7,26 @@ import './cssfile/topCreator.css'
 
 export default function TopCreators(){
     const [id, setId] = useState(0)
-    const [changePicture, setChangePicture] = useState([
+
+    const [changePicture] = useState([
      {id:0, img:footerImageDesktop},
-     {id:0, img:footerImageDesktop1},
-     {id:0, img:footerImageDesktop2}
+     {id:1, img:footerImageDesktop1},
+     {id:2, img:footerImageDesktop2}
     ])
  
      useEffect(() => {
-       setTimeout(function(){
-         //code goes here
-      }, 2000);
-     })
+      const interval = setInterval(() => {
+
+        if(id === 2){
+          setId(0)
+        }else{
+          setId(id + 1)
+        }
+        
+      }, 3000)
+      // clearing the interval
+      return () => clearInterval(interval);
+     }, [id])
 
 
     return(
@@ -50,7 +59,7 @@ export default function TopCreators(){
         </p>
         <h3>CIRCA</h3>
         <h2 className="numb">1985</h2>
-        {window.innerWidth < 699 ? <img src={footerImage} alt="monalisa" /> : <img src={changePicture[id].img} alt="monalisa" />}
+        {window.innerWidth < 699 ? <img src={footerImage} alt="monalisa" /> : <img src={changePicture[id].img} alt="monalisa" className={changePicture[id].id === id ? "top-creator-image current" : "top-creator-image"}/>}
       </aside>
     )
 }

@@ -79,16 +79,38 @@
     line-height: 156.7%;
     margin: auto 13%;
   }
-  .section .desktop-view {
+  .section .the-cover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    gap: 20px;
+  }
+  .section .the-cover .desktop-view {
     flex-direction: row;
     flex-wrap: nowrap;
+    justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    width: 25%;
+    height: 30%;
+    overflow: hidden;
   }
-  .section .desktop-view img {
-    width: 45%;
+  .section .the-cover .desktop-view img {
+    width: 100%;
   }
-  .section .desktop-view .img3girl {
+  .section .the-cover .desktop-view .img3girl {
     margin-bottom: 60px;
+  }
+  .section .the-cover .desktop-view-1 {
+    justify-content: flex-start;
+    padding: 0 0 0 25px;
+  }
+  .section .the-cover .desktop-view-2 {
+    justify-content: flex-start;
+  }
+  .section .the-cover .desktop-view-3 {
+    justify-content: space-between;
   }
 }/*# sourceMappingURL=introductorySection.css.map */

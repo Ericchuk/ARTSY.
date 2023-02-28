@@ -39,12 +39,12 @@ export default function WalletForm() {
       <aside>
         {input}
         <div className="instruction">
-          <input type="checkbox" name="remember" id="remember" />
+          <input type="checkbox"   name="remember"    id="remember" />
           <label htmlFor="remember">
             Save my wallet details & information for future transactions
           </label>
         </div>
-        <button>Confirm</button>
+        <a href="/cart/payment/thankYou"><button>Confirm</button></a>
       </aside>
 
       <aside>

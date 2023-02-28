@@ -11,6 +11,7 @@ import DropPage from "./drops/dropPage";
 import CartPage from "./cart/cartPage";
 import ShippingPage from "./shipping/shippingPage";
 import PaymentPage from "./paymentPage/paymentPage";
+import ThankYou from "./thankYou/thankYou";
 
 export default function LandingPage() {
   return (
@@ -25,6 +26,7 @@ export default function LandingPage() {
         <Route path='/cart' element={<CartPage />} />
         <Route path='/cart/shipping' element={<ShippingPage />} />
         <Route path='/cart/shipping/payment' element={<PaymentPage />} />
+        <Route path='/cart/payment/thankYou' element={<ThankYou />} />
       </Routes> 
       {/* <ProductDetailPage /> */}
       {/* <ShippingPage /> */}

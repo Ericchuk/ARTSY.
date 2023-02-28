@@ -143,6 +143,7 @@
             width:600px;
             top: 90px;
             right: 40px;
+            // transition:animation 3s;
         }
 
         .numb {
@@ -156,6 +157,14 @@
         }
     }
 
+    @keyframes opac{
+        0%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
 }
 
 
@@ -182,10 +191,17 @@
             top: 60%;
         }
 
-        img {
+        .top-creator-image {
             width:auto;
             right: 15%;
             top: 16%;
+            opacity:0;
+            transition:all 5s ease;
+            animation: opac 3.1s linear infinite;
+        }
+
+        .current{
+            opacity:1;
         }
 
         .numb {

@@ -127,6 +127,14 @@
     font-size: 100px;
     line-height: 155.5%;
   }
+  @keyframes opac {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 @media screen and (min-width: 700px) {
   .footer-aside-1 {
@@ -146,10 +154,16 @@
     right: 25%;
     top: 60%;
   }
-  .footer-aside-1 img {
+  .footer-aside-1 .top-creator-image {
     width: auto;
     right: 15%;
     top: 16%;
+    opacity: 0;
+    transition: all 5s ease;
+    animation: opac 3.1s linear infinite;
+  }
+  .footer-aside-1 .current {
+    opacity: 1;
   }
   .footer-aside-1 .numb {
     font-weight: 700;
