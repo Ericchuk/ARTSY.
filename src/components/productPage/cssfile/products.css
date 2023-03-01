@@ -89,6 +89,7 @@ a {
     display: block;
     border: none;
     padding: 0 0 0 10px;
+    width: 110%;
   }
   .products-container2 .products {
     position: relative;

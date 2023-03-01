@@ -99,18 +99,24 @@
   }
   .section .the-cover .desktop-view img {
     width: 100%;
+    opacity: 0;
+    transform: translateX(20px);
   }
-  .section .the-cover .desktop-view .img3girl {
-    margin-bottom: 60px;
+  .section .the-cover .desktop-view .move {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: transform 0.5s ease-in;
   }
-  .section .the-cover .desktop-view-1 {
-    justify-content: flex-start;
-    padding: 0 0 0 25px;
+  .section .the-cover .desktop-view-1,
+  .section .the-cover .desktop-view-4 {
+    width: 22%;
   }
-  .section .the-cover .desktop-view-2 {
-    justify-content: flex-start;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(50px);
   }
-  .section .the-cover .desktop-view-3 {
-    justify-content: space-between;
+  100% {
+    transform: translateX(0);
   }
 }/*# sourceMappingURL=introductorySection.css.map */

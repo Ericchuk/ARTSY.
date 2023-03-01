@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import back from "../img/Rectangle 240.png";
 import center from "../img/Rectangle 241.png";
 import front from "../img/Rectangle 242.png";
@@ -8,6 +9,7 @@ import fourth from "../img/Rectangle 233.png";
 import "./cssfile/introductorySection.css";
 
 export default function Banner1() {
+  const [id, setId] = useState(0)
   const desktopImage = [
     {
       id: 0,
@@ -16,12 +18,34 @@ export default function Banner1() {
     },
     {
       id: 1,
-      src: second,
+      src: fourth,
       alt: "flower",
     },
     {
       id: 2,
       src: third,
+      alt: "flower",
+    },
+    {
+      id: 3,
+      src: second,
+      alt: "flower",
+    },
+  ];
+  const desktopImage2 = [
+    {
+      id: 0,
+      src: second,
+      alt: "girl",
+    },
+    {
+      id: 1,
+      src:third ,
+      alt: "flower",
+    },
+    {
+      id: 2,
+      src: first,
       alt: "flower",
     },
     {
@@ -34,12 +58,12 @@ export default function Banner1() {
   const desktopImage3 = [
     {
       id: 0,
-      src:second ,
+      src:third ,
       alt: "girl",
     },
     {
       id: 1,
-      src:first ,
+      src:second ,
       alt: "flower",
     },
     {
@@ -49,46 +73,49 @@ export default function Banner1() {
     },
     {
       id: 3,
+      src:first ,
+      alt: "flower",
+    },
+  ];
+
+  const desktopImage4 = [
+    {
+      id: 0,
+      src:fourth ,
+      alt: "girl",
+    },
+    {
+      id: 1,
+      src: first,
+      alt: "flower",
+    },
+    {
+      id: 2,
+      src: second,
+      alt: "flower",
+    },
+    {
+      id: 3,
       src:third ,
       alt: "flower",
     },
   ];
 
-  const deskMap = desktopImage
-    .map((each) => {
-      return (
-        // <aside key={each.id}>
-        <img src={each.src} alt={each.alt} className="im" />
-        // </aside>
-      );
-    });
 
-    const deskMap2 = desktopImage
-    .map((each) => {
-      return (
-        // <aside key={each.id}>
-        <img src={each.src} alt={each.alt} className="im" />
-        // </aside>
-      );
-    }).reverse();
-
-    const deskMap3 = desktopImage3
-    .map((each) => {
-      return (
-        // <aside key={each.id}>
-        <img src={each.src} alt={each.alt} className="im" />
-        // </aside>
-      );
-    }).reverse();
-
-    const deskMap4 = desktopImage3
-    .map((each) => {
-      return (
-        // <aside key={each.id}>
-        <img src={each.src} alt={each.alt} className="im" />
-        // </aside>
-      );
-    });
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(id === 3){
+        setId(0)
+        
+      }else{
+        setId(id + 1)
+        console.log(id)
+      }
+      
+    }, 5000)
+    // clearing the interval
+    return () => clearInterval(interval);
+  })
 
 
   return (
@@ -104,17 +131,27 @@ export default function Banner1() {
       {window.innerWidth > 699 ? (
         <aside className="the-cover">
           <aside className="desktop-view desktop-view-1">
-            {deskMap}
+            {/* {deskMap} */}
+            <img src={desktopImage[id].src} alt="ffff" className={desktopImage[id].id === id ? "move img" : "img"} />
           </aside>
-          {window.innerWidth > 1020 ? <aside className="desktop-view desktop-view-2">
-            {deskMap2}
-          </aside> : ""}
-          {window.innerWidth > 1020 ?  <aside className="desktop-view desktop-view-3">
-            {deskMap3}
-          </aside> : ""}
-          {window.innerWidth > 1020 ?  <aside className="desktop-view desktop-view-4">
-            {deskMap4}
-          </aside> : ""}
+          {/* {/* {window.innerWidth > 1020 ?  */}
+          <aside className="desktop-view desktop-view-2">
+            {/* {deskMap2} */}
+            <img src={desktopImage2[id].src} alt="ffff" className={desktopImage[id].id === id ? "img move" : "img"} />
+          </aside>
+           {/* : ""} */}
+          {/* {window.innerWidth > 1020 ? */}
+             <aside className="desktop-view desktop-view-3"> 
+            <img src={desktopImage3[id].src} alt="ffff" className={desktopImage[id].id === id ? "move" : ""} />
+            {/* {deskMap3} */}
+          </aside> 
+          {/* : ""} */}
+          {/* {window.innerWidth > 1020 ?   */}
+          <aside className="desktop-view desktop-view-4">
+            {/* {deskMap4} */}
+            <img src={desktopImage4[id].src} alt="ffff" className={desktopImage[id].id === id ? "move" : ""} />
+          </aside> : 
+          {/* ""} */}
         </aside>
       ) : (
         <aside>

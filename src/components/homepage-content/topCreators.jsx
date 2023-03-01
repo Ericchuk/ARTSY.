@@ -59,7 +59,7 @@ export default function TopCreators(){
         </p>
         <h3>CIRCA</h3>
         <h2 className="numb">1985</h2>
-        {window.innerWidth < 699 ? <img src={footerImage} alt="monalisa" /> : <img src={changePicture[id].img} alt="monalisa" className={changePicture[id].id === id ? "top-creator-image current" : "top-creator-image"}/>}
+        {window.innerWidth < 699 ? <img src={footerImage} alt="monalisa" /> : <img src={changePicture[id].img} alt="monalisa" className={changePicture[id].id === id ? "top-creator-image current" : "top-creator-image"}/>} 
       </aside>
     )
 }

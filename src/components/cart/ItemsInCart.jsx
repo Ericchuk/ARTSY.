@@ -24,12 +24,11 @@ export default function ItemsInCart() {
     }
   };
 
-//   delete function 
-const handleDeleteItem = (itemId) => {
+  //   delete function
+  const handleDeleteItem = (itemId) => {
     const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
-    console.log(updatedCartItems)
     setCartItems(updatedCartItems);
-}
+  };
 
   // map through itemsInCart
   const item = cartItems.map((each) => {
@@ -37,20 +36,23 @@ const handleDeleteItem = (itemId) => {
       <div className="" key={each.id}>
         <img src={each.img} alt={each.name} />
         <div className="itemInCart-info">
-          {window.innerWidth < 700 ? <p>{each.type}</p> : ""}
-          <p className="name">{each.ref}</p>
-          {window.innerWidth > 700 ? (
-            <p className="creator">{each.creator}</p>
-          ) : (
-            ""
-          )}
-          {window.innerWidth > 700 ? (
-            <p className="size">
-              Size: <span>{each.size}</span>
-            </p>
-          ) : (
-            ""
-          )}
+          <span>
+            {window.innerWidth < 700 ? <p>{each.type}</p> : ""}
+            <p className="name">{each.ref}</p>
+            {window.innerWidth > 700 ? (
+              <p className="creator">{each.creator}</p>
+            ) : (
+              ""
+            )}
+            {window.innerWidth > 700 ? (
+              <p className="size">
+                Size: <span>{each.size}</span>
+              </p>
+            ) : (
+              ""
+            )}
+          </span>
+
           <span className="counter">
             <button onClick={() => handleDecreaseQuantity(each.id)}>-</button>
             <p>{each.quantity}</p>
@@ -61,7 +63,7 @@ const handleDeleteItem = (itemId) => {
           <span className="remove" onClick={() => handleDeleteItem(each.id)}>
             <img src={remove} alt="" />
           </span>
-          <p className="price">${each.price * each.quantity}</p>
+          <p className="price">${(each.price * each.quantity).toFixed(2)}</p>
         </div>
       </div>
     );
@@ -69,7 +71,13 @@ const handleDeleteItem = (itemId) => {
   return (
     <section className="itemInCart">
       <aside className="itemInCart-container">
-        {cartItems.length !== 0 ? item : <p><b>No item in cart</b></p>}
+        {cartItems.length !== 0 ? (
+          item
+        ) : (
+          <p>
+            <b>No item in cart</b>
+          </p>
+        )}
       </aside>
     </section>
   );

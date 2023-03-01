@@ -112,33 +112,39 @@
                 justify-content: flex-start;
                 align-items: center;
                 gap: 10px;
-                // border: 2px solid red;
                 width: 25%;
                 height: 30%;
                 overflow: hidden;
 
                 img {
                     width: 100%;
+                    opacity:0;
+                    transform:translateX(20px);
                 }
 
-                .img3girl {
-                    margin-bottom: 60px;
+                .move{
+                    opacity:1;
+                    transform:translateX(0px);
+                    transition:transform .5s ease-in;
                 }
+
             }
 
-            .desktop-view-1{
-                justify-content:flex-start;
-                padding:0 0 0 25px;
-            }
-            .desktop-view-2{
-                justify-content:flex-start;
-            }
-
-            .desktop-view-3{
-                justify-content:space-between;
+            .desktop-view-1,
+            .desktop-view-4{
+                width:22%;
             }
         }
 
     }
 
+}
+
+@keyframes slideIn{
+    0%{
+        transform:translateX(50px)
+    }
+    100%{
+        transform:translateX(0)
+    }
 }

@@ -116,9 +116,14 @@
 
                 .itemInCart-info {
                     width: 70%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: flex-start;
+                    flex-direction: column;
 
                     .name{
                         margin:0;
+                        padding:0;
                     }
 
                     .creator {
@@ -132,6 +137,7 @@
                         line-height: 27px;
                         color: #888888;
                         margin:5px 0;
+                        padding:0;
 
                         span {
                             font-size: 20px;
