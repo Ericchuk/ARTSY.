@@ -4,7 +4,6 @@ import ChoiceInCart from "./choiceInCart";
 import ItemsInCart from "./ItemsInCart";
 import CartCard from "./cartCard";
 import ShippingPage from "../shipping/shippingPage";
-import ThankYou from "../thankYou/thankYou";
 import "./cssfile/cartPage.css";
 
 export default function Cart() {

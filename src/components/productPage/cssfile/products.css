@@ -1,3 +1,7 @@
+a {
+  text-decoration: none;
+}
+
 .products > aside {
   display: flex;
   justify-content: space-between;

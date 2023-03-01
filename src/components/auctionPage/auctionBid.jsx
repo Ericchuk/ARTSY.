@@ -7,9 +7,9 @@ import More from '../moreArrowBlack';
 import './cssfile/auctionBid.css';
 
 export default function AuctionBid() {
-  const [fav, setFav] = useState(true);
+  
 
-  const creators = [
+  const [creators, setCreators] = useState([
     {
       id: 0,
       img: outOfBox,
@@ -18,7 +18,7 @@ export default function AuctionBid() {
       creator: "Jacob Banks",
       date: "12 / 08 / 22",
       currentBid: "0.987ETH",
-      fav: fav,
+      fav: true,
     },
     {
       id: 1,
@@ -28,7 +28,7 @@ export default function AuctionBid() {
       creator: "Jacob Banks",
       date: "12 / 08 / 22",
       currentBid: "0.987ETH",
-      fav: !fav,
+      fav: false,
     },
     {
       id: 2,
@@ -38,21 +38,21 @@ export default function AuctionBid() {
       creator: "Jacob Banks",
       date: "12 / 08 / 22",
       currentBid: "0.987ETH",
-      fav: !fav,
+      fav: false,
     },
-  ];
+  ]);
 
   const creator = creators.map((data) => {
     return (
       <aside key={data.id}>
         <div className="box">
           {data.fav ? (
-            <div className="fav" onClick={unFav}>
+            <div className="fav" onClick={() => {unFav(data.id)}}>
                <img src={love} alt="love" /> 
             </div>
             
           ) : (
-            <div className="fav" onClick={unFav}>
+            <div className="fav" onClick={() => {unFav(data.id)}}>
                <img src={noLove} alt="no Love" /> 
             </div>
             
@@ -76,8 +76,16 @@ export default function AuctionBid() {
     );
   });
 
-  function unFav(){
-    setFav(!fav)
+  function unFav(itemId){
+    const itemIndex = creators.findIndex((item) => item.id === itemId);
+    const updatedBid = [...creators];
+    if(updatedBid[itemIndex].fav === false){
+      updatedBid[itemIndex].fav = true;
+      setCreators(updatedBid);
+    }else{
+      updatedBid[itemIndex].fav = false;
+      setCreators(updatedBid);
+    }
   }
 
   return (

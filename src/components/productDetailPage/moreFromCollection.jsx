@@ -44,7 +44,7 @@ export default function MoreFromCollection() {
 
   const caroDatas = caroData.map((data) => {
     return (
-      <div>
+      <div key={data.id}>
         <img src={Fav} alt="favourite" />
         <img src={data.img} alt={data.title} />
         <div>

@@ -20,30 +20,30 @@ export default function Footer() {
             <div className="desk-footer">
               <h2>ARTSY.</h2>
               <ul>
-                <a href="#">
+                <a href="/">
                   <li>Home</li>
                 </a>
-                <a href="#">
+                <a href="/marketplace">
                   <li>Marketplace</li>
                 </a>
-                <a href="#">
+                <a href="/auction">
                   <li>Auctions</li>
                 </a>
-                <a href="#">
+                <a href="/drop">
                   <li>Drops</li>
                 </a>
               </ul>
               <ul>
-                <a href="#">
+                <a href="blogs">
                   <li>Blog</li>
                 </a>
-                <a href="#">
+                <a href="wallets">
                   <li>Wallets</li>
                 </a>
-                <a href="#">
+                <a href="rates">
                   <li>Rates</li>
                 </a>
-                <a href="#">
+                <a href="bids">
                   <li>High bids</li>
                 </a>
               </ul>

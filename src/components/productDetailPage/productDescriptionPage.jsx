@@ -1,14 +1,13 @@
-import Rectangle from '../img/Rectangle 308.png';
 import './cssfile/description.css';
 
-export default function Description(){
+export default function Description({product, id}){
     return(
         <section className="description">
             <div>
-                <img src={Rectangle} alt="girl" />
+                <img src={product[id].img} alt="girl" />
                 <aside>
-                    <p>product name</p>
-                    <p>amount</p>
+                    <p>{product[id].name}</p>
+                    <p>{product[id].price.toFixed(2)}</p>
                 </aside>
             </div>
         </section>

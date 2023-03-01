@@ -5,7 +5,8 @@ import note from "./img/Vector (7).png";
 import ellipse from "./img/Ellipse 3.png";
 import "./cssfiles/header.css";
 import Navbar from "./navbar";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,17 +15,11 @@ export default function Header() {
     setIsOpen(!isOpen);
   }
 
-  window.onload = () => {
+  useEffect(() => {
     if (window.innerWidth > 699) {
       setIsOpen(true);
     }
-  };
-
-  window.onclick = () => {
-    if (window.innerWidth > 699) {
-      setIsOpen(true);
-    }
-  };
+  }, [isOpen]);
 
   return (
     <header>
@@ -44,10 +39,20 @@ export default function Header() {
       <aside>
         <img src={search} alt="search-icon" className="cursor" />
         <div className="ellipse-container cursor">
-          <img src={cart} alt="ellipse" />
-          <img src={ellipse} alt="cart" className="ellipse" />
+          <Link to="cart">
+            <img src={cart} alt="ellipse" />
+            <img src={ellipse} alt="cart" className="ellipse" />
+          </Link>
         </div>
-        {window.innerWidth > 699 ? <img src={note} alt="notification-icon" className="cursor note-bell" /> : ""}
+        {window.innerWidth > 699 ? (
+          <img
+            src={note}
+            alt="notification-icon"
+            className="cursor note-bell"
+          />
+        ) : (
+          ""
+        )}
       </aside>
     </header>
   );

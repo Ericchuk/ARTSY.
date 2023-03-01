@@ -9,12 +9,25 @@
         width: 100%;
         flex-direction: column;
 
+        p{
+            text-align:center;
+            width:100%;
+            font-size:30px;
+            b{
+                margin:30px 0;
+                display:block;
+            }
+        }
+
         >div {
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
             width: 100%;
 
+            img{
+                width:170px;
+            }
             .itemInCart-info {
                 width: 60%;
                 text-align: left;
@@ -83,6 +96,8 @@
     }
 }
 
+
+
 @media screen and (min-width:700px) {
     .itemInCart {
         padding: 20px 20px;
@@ -127,6 +142,9 @@
 
                     .counter {
                         width: 150px;
+                        position:relative;
+                        left:auto;
+                        
                     }
                 }
             }

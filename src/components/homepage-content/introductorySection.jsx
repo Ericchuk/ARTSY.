@@ -6,7 +6,6 @@ import second from "../img/Rectangle 231.png";
 import third from "../img/Rectangle 232.png";
 import fourth from "../img/Rectangle 233.png";
 import "./cssfile/introductorySection.css";
-import { useState } from 'react';
 
 export default function Banner1() {
   const desktopImage = [

@@ -1,86 +1,76 @@
-import {useState} from 'react';
-import remove from '../img/Vector (3).png';
-import firsy from '../img/Rectangle 39.png';
-import secindy from '../img/Rectangle 284.png';
-import thirdy from '../img/Rectangle 287.png';
-import './cssfile/itemsInCart.css';
+import { useContext } from "react";
+import { CartContext } from "../cartItemContextApi";
+import remove from "../img/Vector (3).png";
+import "./cssfile/itemsInCart.css";
 
-export default function ItemsInCart(){
-    const [counter, setCounter] = useState(1);
+export default function ItemsInCart() {
+  const [cartItems, setCartItems] = useContext(CartContext);
 
-    // increase count function 
-    function increaseCounter(){
-        setCounter(counter + 1);
+  // increase count function
+  const handleIncreaseQuantity = (itemId) => {
+    const itemIndex = cartItems.findIndex((item) => item.id === itemId);
+    const updatedCartItems = [...cartItems];
+    updatedCartItems[itemIndex].quantity += 1;
+    setCartItems(updatedCartItems);
+  };
+
+  // decrease count function
+  const handleDecreaseQuantity = (itemId) => {
+    const itemIndex = cartItems.findIndex((item) => item.id === itemId);
+    const updatedCartItems = [...cartItems];
+    if (updatedCartItems[itemIndex].quantity > 1) {
+      updatedCartItems[itemIndex].quantity -= 1;
+      setCartItems(updatedCartItems);
     }
+  };
 
-    // decrease count function
-    function decreaseCounter(){
-        if(counter > 1){
-            setCounter(counter - 1);
-        }
-    }
+//   delete function 
+const handleDeleteItem = (itemId) => {
+    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
+    console.log(updatedCartItems)
+    setCartItems(updatedCartItems);
+}
 
-    const itemsInCart = [
-        {
-            id:0,
-            type:"Editorial",
-            name:"Philomena",
-            size:"200 ft",
-            creator:"Clearamane",
-            price:36.50,
-            img:firsy,
-        },
-        {
-            id:1,
-            type:"Editorial",
-            name:"Warped",
-            size:"200 ft",
-            creator:"Clearamane",
-            price:36.50,
-            img:secindy,
-        },
-        {
-            id:2,
-            type:"Nature",
-            name:"Ellipsia",
-            size:"200 ft",
-            creator:"Clearamane",
-            price:36.50,
-            img:thirdy,
-        },
-        
-    ]
-
-    // map through itemsInCart 
-    const item = itemsInCart.map((each) => {
-        return(
-            <div className="" key={each.id}>
-                <img src={each.img} alt={each.name} />
-                <div className="itemInCart-info">
-                   {window.innerWidth < 700 ? <p>{each.type}</p> : ""}
-                    <p className="name">{each.name}</p>
-                    {window.innerWidth > 700 ? <p className="creator">{each.creator}</p> : ""}
-                    {window.innerWidth > 700 ? <p className="size">Size: <span>{each.size}</span></p> : ""}
-                    <span className="counter">
-                        <button onClick={decreaseCounter}>-</button>
-                        <p>{counter}</p>
-                        <button onClick={increaseCounter}>+</button>
-                    </span>
-                 </div>
-                 <div className="delete-container">
-                    <span className="remove">
-                      <img src={remove} alt="" />  
-                    </span>
-                    <p className="price">${each.price * counter}</p>
-                 </div>
-            </div>
-        )
-    })
-    return(
-        <section className="itemInCart">
-            <aside className="itemInCart-container">
-                {item}
-            </aside>
-        </section>
-    )
+  // map through itemsInCart
+  const item = cartItems.map((each) => {
+    return (
+      <div className="" key={each.id}>
+        <img src={each.img} alt={each.name} />
+        <div className="itemInCart-info">
+          {window.innerWidth < 700 ? <p>{each.type}</p> : ""}
+          <p className="name">{each.ref}</p>
+          {window.innerWidth > 700 ? (
+            <p className="creator">{each.creator}</p>
+          ) : (
+            ""
+          )}
+          {window.innerWidth > 700 ? (
+            <p className="size">
+              Size: <span>{each.size}</span>
+            </p>
+          ) : (
+            ""
+          )}
+          <span className="counter">
+            <button onClick={() => handleDecreaseQuantity(each.id)}>-</button>
+            <p>{each.quantity}</p>
+            <button onClick={() => handleIncreaseQuantity(each.id)}>+</button>
+          </span>
+        </div>
+        <div className="delete-container">
+          <span className="remove" onClick={() => handleDeleteItem(each.id)}>
+            <img src={remove} alt="" />
+          </span>
+          <p className="price">${each.price * each.quantity}</p>
+        </div>
+      </div>
+    );
+  });
+  return (
+    <section className="itemInCart">
+      <aside className="itemInCart-container">
+        {cartItems.length !== 0 ? item : <p><b>No item in cart</b></p>}
+      </aside>
+    </section>
+  );
 }
