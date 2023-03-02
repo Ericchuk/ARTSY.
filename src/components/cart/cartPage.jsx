@@ -26,7 +26,7 @@ export default function Cart() {
         <CartCard shipping={shipping} changeShipping={changeShipping}   />
       </section>
 
-      {window.innerWidth > 699 && shipping ? <ShippingPage removeShipping={removeShipping} /> : ""}
+      {shipping ? <ShippingPage removeShipping={removeShipping} /> : ""}
 
     </section>
   );

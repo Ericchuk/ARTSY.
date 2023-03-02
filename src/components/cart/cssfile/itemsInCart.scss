@@ -1,11 +1,11 @@
 .itemInCart {
-    padding: 40px 0 20px;
+    padding: 40px 10px 20px;
 
     .itemInCart-container {
         display: flex;
         justify-content: flex-start;
-        align-items: flex-start;
-        gap: 30px;
+        align-items: flex-end;
+        gap: 10px;
         width: 100%;
         flex-direction: column;
 
@@ -26,12 +26,16 @@
             width: 100%;
 
             img{
-                width:170px;
+                width:150px;
             }
             .itemInCart-info {
                 width: 60%;
                 text-align: left;
                 margin: 0 10px;
+                display:flex;
+                justify-content: flex-start;
+                align-items: flex-start;
+                flex-direction: column;
 
                 .name {
                     font-weight: 700;
@@ -43,16 +47,16 @@
 
                 .counter {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content:center;
                     align-items: center;
-                    width: 100%;
+                    width: 90%;
                     border: 0.5px solid #000000;
                     border-radius: 10px;
                     font-weight: 500;
 
                     button {
                         background: transparent;
-                        padding: 5px 17px;
+                        padding: 5px 13px;
                         outline: none;
                         border-right: 0.5px solid #000000;
                         border-top: none;
