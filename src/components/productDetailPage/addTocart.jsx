@@ -1,30 +1,30 @@
 import { useState, useContext } from "react";
-import { CartContext } from "../cartItemContextApi";
+import { ProductContext } from '../productContectApi';
 import Fav from "../img/Vector (17).png";
 import "./cssfile/addToCart.css";
 
-export default function AddToCart({ id, product }) {
-  const [cartItems, setCartItems] = useContext(CartContext);
-  const [inCart, setInCart] = useState(false);
+export default function AddToCart({ id, products }) {
+  const {inCart,setInCart} = useContext(ProductContext);
+  const [cartItems,setCartItems ] = useState(false);
 
   function addToCart(item) {
-    if (cartItems.some((cart) => cart.id === item.id)) {
-      setInCart(true);
+    if (inCart.some((cart) => cart.id === item.id)) {
+      setCartItems(true);
       
     } else {
-      setInCart(false);
-      setCartItems([...cartItems, item]);
-      console.log(cartItems.some((cart) => cart.id === item.id));
+      setCartItems(false);
+      setInCart([...inCart, item]);
+      console.log(inCart.some((cart) => cart.id === item.id));
     }
   }
   return (
     <section className="addToCart">
       <aside>
         <button
-          disabled={inCart ? "disabled" : ""}
-          onClick={() => addToCart(product[id])}
+          disabled={cartItems ? "disabled" : ""}
+          onClick={() => addToCart(products[id])}
         >
-          {inCart ? "Added" : "Add to cart"}
+          {cartItems ? "Added" : "Add to cart"}
         </button>
         <div className="fav-container">
           <img src={Fav} alt="favourite" />

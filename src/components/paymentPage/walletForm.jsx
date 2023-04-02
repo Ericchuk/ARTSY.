@@ -1,4 +1,7 @@
 import "./cssfile/walletForm.css";
+import { useContext } from 'react';
+import { ProductContext } from "../productContectApi";
+
 
 export default function WalletForm() {
   const inputs = [
@@ -6,6 +9,7 @@ export default function WalletForm() {
       id: 0,
       type: "text",
       name: "Wallet type",
+      // value=""
     },
     {
       id: 1,
@@ -15,7 +19,7 @@ export default function WalletForm() {
     },
     {
       id: 2,
-      type: "number",
+      type: "date",
       name: "Expiry date",
     },
     {
@@ -24,6 +28,7 @@ export default function WalletForm() {
       name: "Safe code",
     },
   ];
+  const {inCart,shippingFare,total, gTotal, select,city,country} = useContext(ProductContext)
 
   const input = inputs.map((each) => {
     return (
@@ -50,8 +55,8 @@ export default function WalletForm() {
       <aside>
         <h4>Payment Summary</h4>
         <div>
-          <p>Metamask wallet : 002345KJi90pzzz3</p>
-          <p>Actively linked to Yaba, Lagos Nigeria.</p>
+          <p>{select} : 002345KJi90pzzz3</p>
+          <p>Actively linked to {city}, {country}.</p>
         </div>
         <div>
           <p>Expected arrival date: Between 22nd September and 26th September 2022</p>
@@ -61,19 +66,19 @@ export default function WalletForm() {
             <div>
               <p>Products in cart:</p>
               <p>
-                <b>4 items</b>
+                <b>{inCart.length} items</b>
               </p>
             </div>
             <div>
               <p>Shipping:</p>
               <p>
-                <b>$2.50</b>
+                <b>${shippingFare}</b>
               </p>
             </div>
             <div>
               <p>Total</p>
               <p>
-                <b>$114.00</b>
+                <b>${total}</b>
               </p>
             </div>
 
@@ -81,7 +86,7 @@ export default function WalletForm() {
             <div>
               <p>Grand total:</p>
               <p>
-                <b>$116.50</b>
+                <b>${gTotal}</b>
               </p>
             </div>
           </aside>

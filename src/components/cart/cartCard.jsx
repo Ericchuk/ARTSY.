@@ -1,24 +1,20 @@
 import { Link } from "react-router-dom";
-import { useState, useContext, useEffect } from "react";
-import { CartContext } from "../cartItemContextApi";
+import { useContext, useEffect } from "react";
+import { ProductContext } from "../productContectApi";
 import "./cssfile/cartCard.css";
 
 export default function CartCard({ shipping, changeShipping }) {
-  const [cartItems] = useContext(CartContext);
-  const [total, setTotal] = useState(0);
-  const [shippingFare, setShippingFare] = useState(0);
-  const [gTotal, setGTotal] = useState(0);
-  const [counter, setCounter] = useState(0);
+  const {inCart,total, setTotal, shippingFare, setShippingFare, gTotal, setGTotal,counter, setCounter} = useContext(ProductContext);
 
   useEffect(() => {
     let sum = 0;
-    cartItems.forEach((item) => {
+    inCart.forEach((item) => {
       sum += item.price * item.quantity;
     });
     setTotal(sum);
 
    
-  }, [cartItems]);
+  }, [inCart]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,7 +27,7 @@ export default function CartCard({ shipping, changeShipping }) {
       
     // clearing the interval
     return () => clearInterval(interval);
-  }, [counter]);
+  }, [counter, setTotal]);
 
   return (
     <section className="cart-card">
@@ -40,14 +36,14 @@ export default function CartCard({ shipping, changeShipping }) {
           <p>Products in cart:</p>
           <p>
             <b>
-              {cartItems.length} {cartItems.length > 1 ? "items" : "item"}
+              {inCart.length} {inCart.length > 1 ? "items" : "item"}
             </b>
           </p>
         </div>
         <div>
           <p>Shipping:</p>
           <p>
-            <b>${cartItems.length > 0 ? shippingFare : "0.00"}</b>
+            <b>${inCart.length > 0 ? shippingFare : "0.00"}</b>
           </p>
         </div>
         <div>
@@ -61,14 +57,14 @@ export default function CartCard({ shipping, changeShipping }) {
         <div>
           <p>Grand total:</p>
           <p>
-            <b>${cartItems.length > 0 ? gTotal.toFixed(2) : "0.00"}</b>
+            <b>${inCart.length > 0 ? gTotal.toFixed(2) : "0.00"}</b>
           </p>
         </div>
       </aside>
 
       {!shipping ? (
         <aside>
-          <button onClick={changeShipping} disabled={cartItems.length > 0 ? "" : "disabled"}>Proceed to checkout</button>
+          <button onClick={changeShipping} disabled={inCart.length > 0 ? "" : "disabled"}>Proceed to checkout</button>
           <Link to="/marketplace">Continue shopping</Link>
         </aside>
       ) : (

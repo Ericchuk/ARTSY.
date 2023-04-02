@@ -6,7 +6,7 @@ import "./cssfile/filter.css";
 
 export default function Filter() {
   const [hover, setHover] = useState(false);
-  const [products, setProducts] = useContext(ProductContext);
+  const {products, setProducts} = useContext(ProductContext);
 
   useEffect(() => {
     window.innerWidth > 999 ? setHover(true) : setHover(false);
@@ -18,7 +18,7 @@ export default function Filter() {
 
   const filterEditorial = (items) => {
     const result = products.filter((filtered) => {
-      return filtered.type !== items
+      return filtered.type === items
     })
     setProducts(result)
   }

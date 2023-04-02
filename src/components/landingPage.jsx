@@ -1,5 +1,4 @@
 import { ProductProvider } from "./productContectApi";
-import { CartProvider } from "./cartItemContextApi";
 import Header from "./header";
 import Homepage from "./homepage-content/homepage";
 import ProductPage from "./productPage/productpage";
@@ -18,7 +17,6 @@ import ThankYou from "./thankYou/thankYou";
 export default function LandingPage() {
   return (
     <ProductProvider>
-        <CartProvider>
         <article className="landingPage">
           <Header />
           <Routes>
@@ -38,7 +36,6 @@ export default function LandingPage() {
 
           <Footer />
         </article>
-        </CartProvider>
     </ProductProvider>
   );
 }

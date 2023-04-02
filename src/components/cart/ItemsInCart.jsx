@@ -1,37 +1,37 @@
 import { useContext } from "react";
-import { CartContext } from "../cartItemContextApi";
+import { ProductContext } from "../productContectApi";
 import remove from "../img/Vector (3).png";
 import "./cssfile/itemsInCart.css";
 
 export default function ItemsInCart() {
-  const [cartItems, setCartItems] = useContext(CartContext);
+  const {inCart, setInCart} = useContext(ProductContext);
 
   // increase count function
   const handleIncreaseQuantity = (itemId) => {
-    const itemIndex = cartItems.findIndex((item) => item.id === itemId);
-    const updatedCartItems = [...cartItems];
+    const itemIndex = inCart.findIndex((item) => item.id === itemId);
+    const updatedCartItems = [...inCart];
     updatedCartItems[itemIndex].quantity += 1;
-    setCartItems(updatedCartItems);
+    setInCart(updatedCartItems);
   };
 
   // decrease count function
   const handleDecreaseQuantity = (itemId) => {
-    const itemIndex = cartItems.findIndex((item) => item.id === itemId);
-    const updatedCartItems = [...cartItems];
+    const itemIndex = inCart.findIndex((item) => item.id === itemId);
+    const updatedCartItems = [...inCart];
     if (updatedCartItems[itemIndex].quantity > 1) {
       updatedCartItems[itemIndex].quantity -= 1;
-      setCartItems(updatedCartItems);
+      setInCart(updatedCartItems);
     }
   };
 
   //   delete function
   const handleDeleteItem = (itemId) => {
-    const updatedCartItems = cartItems.filter((item) => item.id !== itemId);
-    setCartItems(updatedCartItems);
+    const updatedCartItems = inCart.filter((item) => item.id !== itemId);
+    setInCart(updatedCartItems);
   };
 
   // map through itemsInCart
-  const item = cartItems.map((each) => {
+  const item = inCart.map((each) => {
     return (
       <div className="" key={each.id}>
         <img src={each.img} alt={each.name} />
@@ -71,7 +71,7 @@ export default function ItemsInCart() {
   return (
     <section className="itemInCart">
       <aside className="itemInCart-container">
-        {cartItems.length !== 0 ? (
+        {inCart.length !== 0 ? (
           item
         ) : (
           <p>

@@ -7,11 +7,11 @@ import "./cssfiles/header.css";
 import Navbar from "./navbar";
 import { useEffect, useState, useContext } from "react";
 import { Link } from 'react-router-dom';
-import { CartContext } from "./cartItemContextApi";
+import { ProductContext } from "./productContectApi";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [cartItems] = useContext(CartContext);
+  const {inCart} = useContext(ProductContext);
 
   function openNav() {
     setIsOpen(!isOpen);
@@ -43,7 +43,7 @@ export default function Header() {
         <div className="ellipse-container cursor">
           <Link to="cart">
             <img src={cart} alt="ellipse" />
-            {cartItems.length > 0 ? <img src={ellipse} alt="cart" className="ellipse" /> : ""}
+            {inCart.length > 0 ? <img src={ellipse} alt="cart" className="ellipse" /> : ""}
           </Link>
         </div>
         {window.innerWidth > 699 ? (

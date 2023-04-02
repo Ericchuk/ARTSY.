@@ -15,6 +15,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  cursor:pointer;
 }
 .paymentBtn p {
   width: 100%;
@@ -24,4 +25,5 @@
   text-decoration-line: underline;
   color: #006CA2;
   margin: 20px 0 0;
+  cursor:pointer;
 }/*# sourceMappingURL=paymentBtn.css.map */

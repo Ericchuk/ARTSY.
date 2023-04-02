@@ -12,16 +12,16 @@ import './cssfile/productDetailPage.css';
 
 export default function ProductDetailPage(){
     const { id } = useParams();
-    const [product] = useContext(ProductContext);
+    const {products} = useContext(ProductContext);
    
     return(
         <section className="productDetailPage">
             
             <Href />
-            <Description product={product} id={id}/>
-            <Creator product={product} id={id}/>
+            <Description products={products} id={id}/>
+            <Creator products={products} id={id}/>
             <Counter />
-            <AddToCart id={id} product={product}/>
+            <AddToCart id={id} products={products}/>
             <MoreInfo />
             <MoreFromCollection />
         </section>
