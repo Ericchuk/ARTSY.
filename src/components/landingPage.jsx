@@ -13,12 +13,14 @@ import CartPage from "./cart/cartPage";
 import ShippingPage from "./shipping/shippingPage";
 import PaymentPage from "./paymentPage/paymentPage";
 import ThankYou from "./thankYou/thankYou";
-
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function LandingPage() {
   return (
     <ProductProvider>
         <article className="landingPage">
+          <ToastContainer position="top center" />
           <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />

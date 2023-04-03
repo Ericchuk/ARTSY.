@@ -12,7 +12,7 @@ import firsy from "./img/Rectangle 39.png";
 import secindy from "./img/Rectangle 284.png";
 import thirdy from "./img/Rectangle 287.png";
 import {initializeApp} from 'firebase/app';
-import {getDatabase,ref,set} from 'firebase/database'
+import {getDatabase,ref,push} from 'firebase/database'
 // import PaystackPop from "@paystack/inline-js"
 
 export const ProductContext = createContext();
@@ -460,7 +460,8 @@ export const ProductProvider = ({ children }) => {
   const reference = ref(db, `userData/ ${userData}` );
 
   function writeUserData(){
-    set(reference, {
+    // if(email)
+    push(reference, {
       email:email,
       city:city,
       country:country,
@@ -489,21 +490,6 @@ export const ProductProvider = ({ children }) => {
 
   }
 
-  //  writeUserData("chukwauni@gmail.com", "loagos, nigeria");
-
-  //  set(reference, {
-  //   // username:name,
-  //   email:email,
-  //   city:city,
-  //   country:country,
-  //   number:number,
-  //   walletType:walletType,
-  //   paymentData:paymentData,
-  //   total:total,
-  //   shippingFare:shippingFare,
-  //   gTotal:gTotal,
-  //   incart:inCart,
-  //  });
 
 
   return (
