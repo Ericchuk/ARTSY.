@@ -430,7 +430,7 @@ export const ProductProvider = ({ children }) => {
   const [number, setNumber] = useState("");
   const [key, setKey] = useState("");
   const [safeCode, setSafeCode] = useState("");
-  const [walletType] = useState(select);
+  const [walletType,setWalletType] = useState(select);
 
 
   // paysstack integration
@@ -466,6 +466,9 @@ export const ProductProvider = ({ children }) => {
       country:country,
       number:number,
       walletType:walletType,
+      select:select,
+      key:key,
+      safeCode:safeCode,
       total:total,
       shippingFare:shippingFare,
       gTotal:gTotal,
@@ -529,6 +532,7 @@ export const ProductProvider = ({ children }) => {
         number,
         setNumber,
         walletType,
+        setWalletType,
         select,
         setSelect,
         key,

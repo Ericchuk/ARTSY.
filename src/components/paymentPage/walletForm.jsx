@@ -5,37 +5,45 @@ import { ProductContext } from "../productContectApi";
 
 
 export default function WalletForm() {
+  const {inCart,shippingFare,total, gTotal, select,city,country,writeUserData,key,setKey,walletType,setWalletType,safeCode,setSafeCode,date,setDate} = useContext(ProductContext)
   const inputs = [
     {
       id: 0,
       type: "text",
       name: "Wallet type",
-      // value=""
+      value:walletType,
+      change: () => setWalletType(select), 
     },
     {
       id: 1,
       type: "text",
       name: "Key",
       placeholder: "Please enter your key",
+      value:key,
+      change: (e) => setKey(e.target.value), 
     },
     {
       id: 2,
       type: "date",
       name: "Expiry date",
+      value:date,
+      change: (e) => setDate(e.target.value), 
     },
     {
       id: 3,
       type: "text",
       name: "Safe code",
+      value:safeCode,
+      change: (e) => setSafeCode(e.target.value), 
     },
   ];
-  const {inCart,shippingFare,total, gTotal, select,city,country,writeUserData} = useContext(ProductContext)
+  
 
   const input = inputs.map((each) => {
     return (
       <div className="input" key={each.id}>
         <label htmlFor={each.type}>{each.name}</label>
-        <input type={each.type} placeholder={each.placeholder} />
+        <input type={each.type} placeholder={each.placeholder} value={each.value} onChange={each.change} />
       </div>
     );
   });
