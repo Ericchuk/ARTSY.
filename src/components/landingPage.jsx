@@ -20,7 +20,7 @@ export default function LandingPage() {
   return (
     <ProductProvider>
         <article className="landingPage">
-          <ToastContainer position="top center" />
+          <ToastContainer position="top-center" />
           <Header />
           <Routes>
             <Route path="/" element={<Homepage />} />

@@ -14,6 +14,8 @@ export default function ShippingForm() {
     setNumber,
     select,
     setSelect,
+    postalcode,
+    setpostalcode,
   } = useContext(ProductContext);
   const form = [
     {
@@ -56,6 +58,8 @@ export default function ShippingForm() {
       type: "number",
       placeholder: "",
       required: true,
+      value:postalcode,
+      change: (e) => setpostalcode(e.target.value),
     },
     {
       id: 5,

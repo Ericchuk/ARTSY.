@@ -3,8 +3,11 @@ import blue from '../img/Ellipse 73.svg';
 import purple from '../img/Ellipse 74.svg';
 import orange from '../img/Ellipse 75.svg';
 import './thankYou.css';
+import {useContext} from "react";
+import { ProductContext } from "../productContectApi";
 
 export default function ThankYou(){
+    const {email} = useContext(ProductContext);
     return(
         <section className="thank-you">
             <aside>
@@ -14,7 +17,7 @@ export default function ThankYou(){
                <img src={orange} alt="color" className="color"/>
             </aside>
             
-            <h5>Hey Celestina, thank you for your purchase. </h5>
+            <h5>Hey {email}, thank you for your purchase. </h5>
             <p>You are amazing. Cheers to being <span>ARTSY!</span> </p>
         </section>
     )

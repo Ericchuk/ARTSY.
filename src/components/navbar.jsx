@@ -16,7 +16,7 @@ export default function Navbar({ isOpen, setIsOpen }) {
       setActive("Home")
     }else if(location.pathname === "/auction"){
       setActive("Auction")
-    }else if(location.pathname === "/Marketplace"){
+    }else if(location.pathname === "/Marketplace" || location.pathname === "/cart"){
       setActive("Marketplace")
     }else if(location.pathname === "/drop"){
       setActive("Drop")
@@ -30,17 +30,17 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <img src={close} alt="closeNav" onClick={closeNav} />
       </header>
       <ul>
-        <Link to="/" >
-          <li id="Home" className={`${active === "Home" ? "active" : ""}`} onClick={closeNav} >Home</li>
+        <Link to="/" className={`${active === "Home" ? "active" : ""}`}>
+          <li id="Home"  onClick={closeNav} >Home</li>
         </Link>
         <Link to="auction" id="Auction" className={`${active === "Auction" ? "active" : ""}`} onClick={() => setActive("Auction")}  >
-          <li>Auctions</li>
+          <li onClick={closeNav}>Auctions</li>
         </Link>
         <Link to="Marketplace" id="Marketplace" className={`${active === "Marketplace" ? "active" : ""}`} onClick={() => setActive("Marketplace")}>
-          <li>Marketplace</li>
+          <li onClick={closeNav}>Marketplace</li>
         </Link>
         <Link to="drop" id="Drop" className={`${active === "Drop" ? "active" : ""}`} onClick={() => setActive("Drop")}>
-          <li >Drops</li>
+          <li onClick={closeNav}>Drops</li>
         </Link>
       </ul>
       <div className="msg-icon" onClick={closeNav}>

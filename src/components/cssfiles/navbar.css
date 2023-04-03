@@ -31,22 +31,21 @@
   padding: 0 0 0 20px;
 }
 .nav ul a {
-  width: 100%;
+  width: 95%;
   font-size: 25px;
   text-decoration: none;
   color: var(--sec-color);
   position:relative;
   display:flex;
-  justify-content:center;
+  justify-content:flex-start;
   align-items:center;
+  margin:5px 0
 }
 .nav ul a li {
-  /* padding: 10px 0; */
   font-family: "Satoshi";
   font-weight: var(--font-weight);
   font-size: var(--font-size);
   line-height: var(--line-height);
-  /* margin:0 20px; */
 }
 .nav .msg-icon {
   position: absolute;
@@ -59,7 +58,6 @@
   border:2px solid red;
   border-radius:10px;
   padding:0 10px;
-  margin:10px;
 }
 
 @media screen and (min-width: 700px) {

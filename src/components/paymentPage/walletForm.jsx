@@ -1,19 +1,11 @@
 import "./cssfile/walletForm.css";
 import { useContext } from 'react';
 import { ProductContext } from "../productContectApi";
-// import fireDb from "../../config"
 
 
 export default function WalletForm() {
-  const {inCart,shippingFare,total, gTotal, select,city,country,writeUserData,key,setKey,walletType,setWalletType,safeCode,setSafeCode,date,setDate} = useContext(ProductContext)
+  const {inCart,shippingFare,total, gTotal, select,city,country,writeUserData,key,setKey,safeCode,setSafeCode,date,setDate} = useContext(ProductContext)
   const inputs = [
-    {
-      id: 0,
-      type: "text",
-      name: "Wallet type",
-      value:walletType,
-      change: () => setWalletType(select), 
-    },
     {
       id: 1,
       type: "text",
@@ -37,6 +29,7 @@ export default function WalletForm() {
       change: (e) => setSafeCode(e.target.value), 
     },
   ];
+
   
 
   const input = inputs.map((each) => {
@@ -58,7 +51,7 @@ export default function WalletForm() {
             Save my wallet details & information for future transactions
           </label>
         </div>
-        <a href="/cart/payment/thankYou"><button onClick={writeUserData}>Confirm</button></a>
+        <button onClick={writeUserData}>Confirm</button>
       </aside>
 
       <aside>

