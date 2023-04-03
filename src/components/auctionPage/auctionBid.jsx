@@ -5,9 +5,14 @@ import chairsOnRope from "../img/Rectangle 245.png";
 import { useState } from "react";
 import More from '../moreArrowBlack';
 import './cssfile/auctionBid.css';
+import { toast } from 'react-toastify';
 
 export default function AuctionBid() {
   
+
+  function alert(){
+    toast.warn("Please this ia a dummy button, kindly head to the Marketplace to purchase an art")
+  }
 
   const [creators, setCreators] = useState([
     {
@@ -70,7 +75,7 @@ export default function AuctionBid() {
             <p>Current bid</p>
             <p>{data.currentBid}</p>
           </div>
-          <button>Place bid</button>
+          <button onClick={alert}>Place bid</button>
         </div>
       </aside>
     );
@@ -94,8 +99,8 @@ export default function AuctionBid() {
       <aside>
         {creator}
       </aside>
-      <div className="more-arrow-container">
-        <p>Load more</p>
+      <div className="more-arrow-container" onClick={alert}>
+        <p >Load more</p>
         <More />
       </div>
       
