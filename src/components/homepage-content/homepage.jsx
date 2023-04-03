@@ -5,6 +5,7 @@ import Explore from "./exploreandauction";
 import TopCreators from "./topCreators";
 
 export default function Homepage() {
+
   return (
     <article>
       <Banner1 />

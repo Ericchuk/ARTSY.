@@ -1,11 +1,28 @@
 import close from "./img/Vector (3).png";
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import "./cssfiles/navbar.css";
+import { useState, useEffect } from "react";
 
 export default function Navbar({ isOpen, setIsOpen }) {
-  function closeNav() {
+  function closeNav(e) {
     setIsOpen(!isOpen);
   } 
+
+  const [active, setActive] = useState("Home");
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname === '/'){
+      setActive("Home")
+    }else if(location.pathname === "/auction"){
+      setActive("Auction")
+    }else if(location.pathname === "/Marketplace"){
+      setActive("Marketplace")
+    }else if(location.pathname === "/drop"){
+      setActive("Drop")
+    }
+  }, [location])
+
   return (
     <nav className="nav">
       <header>
@@ -13,17 +30,17 @@ export default function Navbar({ isOpen, setIsOpen }) {
         <img src={close} alt="closeNav" onClick={closeNav} />
       </header>
       <ul>
-        <Link to="/"  onClick={closeNav}>
-          <li>Home</li>
+        <Link to="/" >
+          <li id="Home" className={`${active === "Home" ? "active" : ""}`} onClick={closeNav} >Home</li>
         </Link>
-        <Link to="auction"  onClick={closeNav}>
+        <Link to="auction" id="Auction" className={`${active === "Auction" ? "active" : ""}`} onClick={() => setActive("Auction")}  >
           <li>Auctions</li>
         </Link>
-        <Link to="Marketplace"  onClick={closeNav}>
+        <Link to="Marketplace" id="Marketplace" className={`${active === "Marketplace" ? "active" : ""}`} onClick={() => setActive("Marketplace")}>
           <li>Marketplace</li>
         </Link>
-        <Link to="drop"  onClick={closeNav}>
-          <li>Drops</li>
+        <Link to="drop" id="Drop" className={`${active === "Drop" ? "active" : ""}`} onClick={() => setActive("Drop")}>
+          <li >Drops</li>
         </Link>
       </ul>
       <div className="msg-icon" onClick={closeNav}>

@@ -11,6 +11,8 @@ import circa from "./img/Rectangle 260.png";
 import firsy from "./img/Rectangle 39.png";
 import secindy from "./img/Rectangle 284.png";
 import thirdy from "./img/Rectangle 287.png";
+import {initializeApp} from 'firebase/app';
+import {getDatabase,ref,set} from 'firebase/database'
 // import PaystackPop from "@paystack/inline-js"
 
 export const ProductContext = createContext();
@@ -420,13 +422,15 @@ export const ProductProvider = ({ children }) => {
   const [shippingFare, setShippingFare] = useState(0);
   const [gTotal, setGTotal] = useState(0);
   const [counter, setCounter] = useState(0);
-  const [paymentData, setPaymentData] = useState([]);
+  const [userData] = useState([]);
   const [email, setEmail] = useState("");
-  const [walletType, setWalletType] = useState("")
-  const [select, setSelect] =  useState("")
+  const [select, setSelect] = useState("");
   const [city, setCity] = useState("");
   const [country, setCountry] = useState("");
   const [number, setNumber] = useState("");
+  const [key, setKey] = useState("");
+  const [safeCode, setSafeCode] = useState("");
+  const [walletType] = useState(select);
 
 
   // paysstack integration
@@ -439,6 +443,65 @@ export const ProductProvider = ({ children }) => {
   //         name:name,
   //     })
   // }
+
+
+  //   firebase database config
+  const config = {
+    apiKey: "AIzaSyDn5WV4Fyq7K89ajxL4FEfy8PfQJBlgsCc",
+    authDomain: "artsy-3d86c.firebaseapp.com",
+    projectId: "artsy-3d86c",
+    storageBucket: "artsy-3d86c.appspot.com",
+    messagingSenderId: "217613921861",
+    appId: "1:217613921861:web:7d4e6672589850d5fb7d2c",
+  };
+
+  const app = initializeApp(config);
+  const db = getDatabase();
+  const reference = ref(db, `userData/ ${userData}` );
+
+  function writeUserData(){
+    set(reference, {
+      email:email,
+      city:city,
+      country:country,
+      number:number,
+      walletType:walletType,
+      total:total,
+      shippingFare:shippingFare,
+      gTotal:gTotal,
+      incart:inCart.map((item) => {
+        return {
+          id:item.id,
+          type:item.type,
+          ref:item.ref,
+          name:item.name,
+          size:item.size,
+          creator:item.creator,
+          price:item.price,
+          img:item.img,
+          quantity:item.quantity,
+        }
+      }),
+     });
+
+  }
+
+  //  writeUserData("chukwauni@gmail.com", "loagos, nigeria");
+
+  //  set(reference, {
+  //   // username:name,
+  //   email:email,
+  //   city:city,
+  //   country:country,
+  //   number:number,
+  //   walletType:walletType,
+  //   paymentData:paymentData,
+  //   total:total,
+  //   shippingFare:shippingFare,
+  //   gTotal:gTotal,
+  //   incart:inCart,
+  //  });
+
 
   return (
     <ProductContext.Provider
@@ -465,12 +528,14 @@ export const ProductProvider = ({ children }) => {
         setCountry,
         number,
         setNumber,
-        paymentData,
-        setPaymentData,
         walletType,
-        setWalletType,
         select,
-        setSelect
+        setSelect,
+        key,
+        setKey,
+        safeCode,
+        setSafeCode,
+        writeUserData,
       }}
     >
       {children}
