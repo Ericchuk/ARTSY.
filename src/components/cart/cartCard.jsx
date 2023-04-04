@@ -4,7 +4,7 @@ import { ProductContext } from "../productContectApi";
 import "./cssfile/cartCard.css";
 
 export default function CartCard({ shipping, changeShipping }) {
-  const {inCart,total, setTotal, shippingFare, setShippingFare, gTotal, setGTotal,counter, setCounter} = useContext(ProductContext);
+  const {inCart,total, setTotal, shippingFare, setShippingFare, gTotal, setGTotal,counter, setCounter,paid} = useContext(ProductContext);
 
   useEffect(() => {
     let sum = 0;
@@ -64,7 +64,7 @@ export default function CartCard({ shipping, changeShipping }) {
 
       {!shipping ? (
         <aside>
-          <button onClick={changeShipping} disabled={inCart.length > 0 ? "" : "disabled"}>Proceed to checkout</button>
+          <button onClick={changeShipping} disabled={inCart.length > 0 || !paid  ? "" : "disabled"}>{!paid ? "Paid" : "Proceed to checkout"}</button>
           <Link to="/marketplace">Continue shopping</Link>
         </aside>
       ) : (
@@ -73,11 +73,3 @@ export default function CartCard({ shipping, changeShipping }) {
     </section>
   );
 }
-
-
-// apiKey: "AIzaSyDn5WV4Fyq7K89ajxL4FEfy8PfQJBlgsCc",
-//   authDomain: "artsy-3d86c.firebaseapp.com",
-//   projectId: "artsy-3d86c",
-//   storageBucket: "artsy-3d86c.appspot.com",
-//   messagingSenderId: "217613921861",
-//   appId: "1:217613921861:web:7d4e6672589850d5fb7d2c"

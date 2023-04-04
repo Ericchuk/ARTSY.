@@ -1,4 +1,4 @@
-import { useState, createContext } from "react";
+import { useState,useEffect, createContext } from "react";
 import BooleanEgyptian from "./img/Rectangle 308.png";
 import RoadToEgypt from "./img/Rectangle 62.png";
 import Blanc from "./img/Rectangle 62 (1).png";
@@ -15,7 +15,7 @@ import {initializeApp} from 'firebase/app';
 import {getDatabase,ref,push} from 'firebase/database'
 import {useNavigate} from 'react-router-dom';
 import {toast} from 'react-toastify';
-// import PaystackPop from "@paystack/inline-js"
+import PaystackPop from "@paystack/inline-js"
 
 export const ProductContext = createContext();
 
@@ -434,35 +434,41 @@ export const ProductProvider = ({ children }) => {
   const [safeCode, setSafeCode] = useState("");
   const [postalcode, setpostalcode] = useState("")
   const [date, setDate] = useState("");
-  const [success,setSuccess] = useState("false");
+  const [paid,setPaid] = useState("false");
   const multiply = gTotal * 100;
   function scrollFunc() {
     return window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if(paid){
+        navigate("/")
+        setPaid(false)
+    }
+    }, 3000)
+    // clearing the interval
+    return () => clearInterval(interval);
+   }, [paid])
 
   // paysstack integration
-  function payWithPaystack() {
-    const handler = PaystackPop.setup({
-      key: 'pk_test_244bad1335a46ad6442abcb487faefe329bf4989', // Replace with your public key
-      email: email,
-      amount:multiply, // the amount value is multiplied by 100 to convert to the lowest currency unit
-
-      callback: function(response) {
-        //this happens after the payment is completed successfully
-        const message = 'Payment completed:'+ response.reference;
-        alert(message);
-        setSuccess(true)
+  function payWithPayStack(){
+    const paystack = new PaystackPop();
+    paystack.newTransaction({
+      key:"pk_test_244bad1335a46ad6442abcb487faefe329bf4989",
+      email:email,
+      amount:multiply * 100,
+      currency:"NGN",
+      onSuccess(transaction){
+        toast.success(`Payment completed ${transaction.reference}`)
+        setPaid(true)
         navigate("/cart/payment/thankYou")
-      //   // Make an AJAX call to your server with the reference to verify the transaction
       },
-      onClose: function() {
-        alert('Transaction was not completed, window closed.');
-        setSuccess(false);
+      onCancel(){
+        toast.error("Transaction was not completed.")
         navigate("/cart/shipping/payment")
-      },
-    });
-    handler.openIframe();
+      }
+    })
   }
 
 
@@ -485,7 +491,7 @@ export const ProductProvider = ({ children }) => {
 
   function writeUserData(e){
     e.preventDefault()
-    if(regexkey.test(key) && regexSafeCode.test(safeCode) && success === true){
+    if(regexkey.test(key) && regexSafeCode.test(safeCode) && paid === true){
       navigate("/cart/payment/thankYou")
     }
     else if(key === "" || safeCode === "" || date === "" ){
@@ -493,8 +499,8 @@ export const ProductProvider = ({ children }) => {
     }
 
     //send data to database
-    payWithPaystack()
-    {success ? push(reference, {
+    payWithPayStack()
+      push(reference, {
       email:email,
       city:city,
       country:country,
@@ -505,6 +511,8 @@ export const ProductProvider = ({ children }) => {
       total:total,
       shippingFare:shippingFare,
       gTotal:gTotal,
+      date:date,
+      paid:paid,
       incart:inCart.map((item) => {
         return {
           id:item.id,
@@ -518,7 +526,8 @@ export const ProductProvider = ({ children }) => {
           quantity:item.quantity,
         }
       }),
-     }) : ""};
+     })
+
 
   }
 
@@ -559,7 +568,10 @@ export const ProductProvider = ({ children }) => {
         postalcode,
         setpostalcode,
         scrollFunc,
-        setDate
+        setDate,
+        date,
+        paid,
+        setPaid,
       }}
     >
       {children}
