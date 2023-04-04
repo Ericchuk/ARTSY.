@@ -9,11 +9,10 @@ export default function AddToCart({ id, products }) {
 
   function addToCart(item) {
     if (inCart.some((cart) => cart.id === item.id)) {
-      setCartItems(true);
-      
-    } else {
       setCartItems(false);
+    } else {
       setInCart([...inCart, item]);
+      setCartItems(true);
       console.log(inCart.some((cart) => cart.id === item.id));
     }
   }

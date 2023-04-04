@@ -433,19 +433,37 @@ export const ProductProvider = ({ children }) => {
   const [key, setKey] = useState("");
   const [safeCode, setSafeCode] = useState("");
   const [postalcode, setpostalcode] = useState("")
-  const [date, setDate] = useState("")
+  const [date, setDate] = useState("");
+  const [success,setSuccess] = useState("false");
+  const multiply = gTotal * 100;
+  function scrollFunc() {
+    return window.scrollTo({ top: 0, behavior: "smooth" });
+  }
 
 
   // paysstack integration
-  // const handlePayStack = (id, name, email) => {
-  //     const payStack = new PaystackPop();
-  //     payStack.newTransaction({
-  //         key:"",
-  //         total: total * 100,
-  //         email:email,
-  //         name:name,
-  //     })
-  // }
+  function payWithPaystack() {
+    const handler = PaystackPop.setup({
+      key: 'pk_test_244bad1335a46ad6442abcb487faefe329bf4989', // Replace with your public key
+      email: email,
+      amount:multiply, // the amount value is multiplied by 100 to convert to the lowest currency unit
+
+      callback: function(response) {
+        //this happens after the payment is completed successfully
+        const message = 'Payment completed:'+ response.reference;
+        alert(message);
+        setSuccess(true)
+        navigate("/cart/payment/thankYou")
+      //   // Make an AJAX call to your server with the reference to verify the transaction
+      },
+      onClose: function() {
+        alert('Transaction was not completed, window closed.');
+        setSuccess(false);
+        navigate("/cart/shipping/payment")
+      },
+    });
+    handler.openIframe();
+  }
 
 
   //   firebase database config
@@ -464,17 +482,19 @@ export const ProductProvider = ({ children }) => {
   const navigate = useNavigate();
   const regexkey = /[0-9a-z]{12,16}/gi;
   const regexSafeCode = /[a-z]{4,7}/gi;
-  const regexDate = /[0-9]{3,8}/
 
   function writeUserData(e){
     e.preventDefault()
-    if(regexkey.test(key) && regexSafeCode.test(safeCode) && regexDate.test(date)){
+    if(regexkey.test(key) && regexSafeCode.test(safeCode) && success === true){
       navigate("/cart/payment/thankYou")
     }
     else if(key === "" || safeCode === "" || date === "" ){
       toast.error("Please fill the input field correctly")
     }
-    push(reference, {
+
+    //send data to database
+    payWithPaystack()
+    {success ? push(reference, {
       email:email,
       city:city,
       country:country,
@@ -498,7 +518,7 @@ export const ProductProvider = ({ children }) => {
           quantity:item.quantity,
         }
       }),
-     });
+     }) : ""};
 
   }
 
@@ -538,6 +558,8 @@ export const ProductProvider = ({ children }) => {
         writeUserData,
         postalcode,
         setpostalcode,
+        scrollFunc,
+        setDate
       }}
     >
       {children}

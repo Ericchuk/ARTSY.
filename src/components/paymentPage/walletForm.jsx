@@ -1,10 +1,15 @@
 import "./cssfile/walletForm.css";
-import { useContext } from 'react';
+import { useEffect,useContext } from 'react';
 import { ProductContext } from "../productContectApi";
 
 
 export default function WalletForm() {
-  const {inCart,shippingFare,total, gTotal, select,city,country,writeUserData,key,setKey,safeCode,setSafeCode,date,setDate} = useContext(ProductContext)
+  const {inCart,shippingFare,total, gTotal, select,city,country,writeUserData,key,setKey,safeCode,setSafeCode,date,setDate,scrollFunc} = useContext(ProductContext)
+
+  useEffect(() => {
+    scrollFunc();
+}, [])
+
   const inputs = [
     {
       id: 1,

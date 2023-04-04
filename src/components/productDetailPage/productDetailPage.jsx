@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useContext } from 'react';
+import { useContext,useEffect } from 'react';
 import { ProductContext } from '../productContectApi';
 import Description from "./productDescriptionPage";
 import Creator from "./creatorsDescriptionPage";
@@ -10,9 +10,15 @@ import MoreFromCollection from "./moreFromCollection";
 import Href from "../productPage/productHref";
 import './cssfile/productDetailPage.css';
 
+
+
 export default function ProductDetailPage(){
     const { id } = useParams();
-    const {products} = useContext(ProductContext);
+    const {products, scrollFunc} = useContext(ProductContext);
+
+    useEffect(() => {
+        scrollFunc();
+    }, [])
    
     return(
         <section className="productDetailPage">

@@ -3,11 +3,14 @@ import blue from '../img/Ellipse 73.svg';
 import purple from '../img/Ellipse 74.svg';
 import orange from '../img/Ellipse 75.svg';
 import './thankYou.css';
-import {useContext} from "react";
+import {useContext, useEffect} from "react";
 import { ProductContext } from "../productContectApi";
 
 export default function ThankYou(){
-    const {email} = useContext(ProductContext);
+    const {email,scrollFunc} = useContext(ProductContext);
+    useEffect(() => {
+        scrollFunc()
+    }, [])
     return(
         <section className="thank-you">
             <aside>

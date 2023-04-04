@@ -1,4 +1,4 @@
-import { useState,useContext } from 'react';
+import { useState,useContext, useEffect } from 'react';
 import { ProductContext } from '../productContectApi';
 import { Link } from 'react-router-dom'
 import Href from './productHref';
@@ -10,7 +10,10 @@ import Product from './products';
 export default function ProductPage() {
   const [postsPerPage] = useState(6);
   const [currentPage, setCurrentPage] = useState(1);
-  const {products} = useContext(ProductContext)
+  const {products, scrollFunc} = useContext(ProductContext)
+  useEffect(() => {
+    scrollFunc();
+}, [currentPage])
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;

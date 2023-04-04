@@ -6,22 +6,25 @@ import "./cssfile/filter.css";
 
 export default function Filter() {
   const [hover, setHover] = useState(false);
+  const [load, setLoad] = useState(false)
   const {products, setProducts} = useContext(ProductContext);
 
   useEffect(() => {
     window.innerWidth > 999 ? setHover(true) : setHover(false);
   }, []);
 
+
   function openFilter() {
     setHover(!hover);
   }
 
   const filterEditorial = (items) => {
-    const result = products.filter((filtered) => {
-      return filtered.type === items
-    })
-    setProducts(result)
-  }
+      const result = products.filter((filtered) => {
+      return filtered.type === items     
+  })
+  setProducts(result)
+  
+}
 
   return (
     <div className="filter">
